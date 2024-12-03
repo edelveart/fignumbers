@@ -1,10 +1,13 @@
-/**
- * Basic configuration with an optional `step` value.
- * Used by various generator strategies like `PronicGenerator`
- * @default step: 1
- */
+import { CONFIG_CONSTANTS } from "./configConstants.js";
+
+// /**
+//  * Basic configuration with an optional `step` value.
+//  * Used by various generator strategies like `PronicGenerator`
+//  * @default step: 1
+
+//  */
 export type StepParameterConfig = {
-  step?: number;
+  [CONFIG_CONSTANTS.step]?: number;
 };
 
 /**
@@ -13,7 +16,7 @@ export type StepParameterConfig = {
  * @default step: 1, m: 3
  */
 export type MfacetsStepParameterConfig = StepParameterConfig & {
-  m?: number;
+  [CONFIG_CONSTANTS.m]?: number;
 };
 
 /**
@@ -22,5 +25,5 @@ export type MfacetsStepParameterConfig = StepParameterConfig & {
  * @default start: 1, step: 1, m: 3
  */
 export type StartStepMfacetsParameterConfig = MfacetsStepParameterConfig & {
-  start?: number;
+  [CONFIG_CONSTANTS.start]?: number;
 };
