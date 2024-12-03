@@ -1,10 +1,10 @@
-import { mFacetsErrorMessage, startErrorMessage, stepErrorMessage } from "./errorMessages.js";
+import { ERROR_MESSAGE } from "./errorMessages.js";
 
 export class Validator {
   static validateStep(step: number | undefined) {
     if (step !== undefined) {
       if (!Number.isInteger(step) || step <= 0) {
-        throw new Error(stepErrorMessage);
+        throw new Error(ERROR_MESSAGE.stepErrorMessage);
       }
     }
   }
@@ -12,7 +12,7 @@ export class Validator {
   static validateStart(start: number | undefined) {
     if (start !== undefined) {
       if (!Number.isInteger(start)) {
-        throw new Error(startErrorMessage);
+        throw new Error(ERROR_MESSAGE.startErrorMessage);
       }
     }
   }
@@ -20,7 +20,7 @@ export class Validator {
   static validateMFacets(m: number | undefined) {
     if (m !== undefined) {
       if (!Number.isInteger(m) || m < 3) {
-        throw new Error(mFacetsErrorMessage);
+        throw new Error(ERROR_MESSAGE.mFacetsErrorMessage);
       }
     }
   }
