@@ -1,0 +1,44 @@
+{
+  "name": "ts-fignumbers",
+  "version": "0.1.0",
+  "description": "A complete TypeScript library for generating figurate numbers in various dimensions.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "test": "vitest run",
+    "dev": "vitest",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run test"
+  },
+  "keywords": [
+    "figurate numbers",
+    "generators",
+    "mathematics",
+    "infinite sequences",
+    "number theory",
+    "geometry"
+  ],
+  "author": "Edgar Armando Delgado Vega",
+  "homepage": "https://github.com/edelveart/ts-fignumbers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edelveart/ts-fignumbers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edelveart/ts-fignumbers/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.17.0",
+    "prettier": "3.4.1",
+    "tsx": "^4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "2.1.6"
+  }
+}
