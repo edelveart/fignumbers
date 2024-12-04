@@ -1,6 +1,6 @@
 import { expect, it, describe } from "vitest";
-import { PlaneFigNumbers } from "../../src/index";
-import { createArrOfFigNumbers } from "../utils/helperGeneratorContext";
+import { PlaneFigNumbers } from "../../../src/index";
+import { createArrOfFigNumbers } from "../../utils/helperGeneratorContext";
 
 describe("Plane Figurate Numbers Generation", () => {
   it("should return the sequence of triangular numbers", () => {

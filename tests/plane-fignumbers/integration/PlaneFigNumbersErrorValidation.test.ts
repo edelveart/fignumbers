@@ -1,6 +1,6 @@
 import { expect, it, describe } from "vitest";
-import { PlaneFigNumbers } from "../../src/index";
-import { ERROR_MESSAGE } from "../../src/core/validators/errorMessages";
+import { PlaneFigNumbers } from "../../../src/index";
+import { ERROR_MESSAGE } from "../../../src/core/validators/errorMessages";
 
 describe("Plane Figurate Numbers Error Validation", () => {
   it("should throw an error if 'step' parameter is not an integer or is less than 1", () => {
