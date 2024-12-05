@@ -1,8 +1,8 @@
 export const createArrOfFigNumbers = (
-  lengthOfSequence: number,
-  numberGenerator: Generator<number>,
+  lengthOfSequence: bigint,
+  numberGenerator: Generator<bigint>,
 ) => {
-  const numberSequence: number[] = [];
+  const numberSequence: bigint[] = [];
   for (let i = 0; i < lengthOfSequence; i++) {
     const { value } = numberGenerator.next();
     numberSequence.push(value);
