@@ -6,10 +6,10 @@ export type CenteredPolygonalConfig = StartStepMfacetsParameterConfig;
 export class CenteredPolygonalGenerator
   implements INumberGeneratorStrategy<CenteredPolygonalConfig>
 {
-  *generate({ start = 1, step = 1, m = 3 }: CenteredPolygonalConfig): Generator<number> {
+  *generate({ start = 1n, step = 1n, m = 3n }: CenteredPolygonalConfig): Generator<bigint> {
     let delta = start;
     while (true) {
-      yield (m * delta ** 2 - m * delta + 2) / 2;
+      yield (m * delta ** 2n - m * delta + 2n) / 2n;
       delta += step;
     }
   }
