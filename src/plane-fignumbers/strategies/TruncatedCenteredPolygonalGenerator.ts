@@ -6,10 +6,14 @@ export type TruncatedCenteredPolygonalConfig = StartStepMfacetsParameterConfig;
 export class TruncatedCenteredPolygonalGenerator
   implements INumberGeneratorStrategy<TruncatedCenteredPolygonalConfig>
 {
-  *generate({ start = 1, step = 1, m = 3 }: TruncatedCenteredPolygonalConfig): Generator<number> {
+  *generate({
+    start = 1n,
+    step = 1n,
+    m = 3n,
+  }: TruncatedCenteredPolygonalConfig): Generator<bigint> {
     let delta = start;
     while (true) {
-      yield 1 + (m * (7 * delta ** 2 - 11 * delta + 4)) / 2;
+      yield 1n + (m * (7n * delta ** 2n - 11n * delta + 4n)) / 2n;
       delta += step;
     }
   }
