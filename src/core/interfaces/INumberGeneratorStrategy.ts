@@ -1,3 +1,3 @@
 export interface INumberGeneratorStrategy<TGenConfig> {
-  generate(config: TGenConfig): Generator<number>;
+  generate(config: TGenConfig): Generator<bigint>;
 }
