@@ -6,7 +6,7 @@ export class SpaceFigNumbers {
   static generate<KMap extends keyof SpaceConfigMap>(
     strategyName: KMap,
     config: SpaceConfigMap[KMap],
-  ): Generator<number> {
+  ): Generator<bigint> {
     if (CONFIG_CONSTANTS.step in config) {
       Validator.validateStep(config.step);
     }
