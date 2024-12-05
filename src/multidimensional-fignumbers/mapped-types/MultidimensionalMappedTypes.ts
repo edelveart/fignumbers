@@ -51,9 +51,9 @@ export type MultiDimensionalConfigMap = {
   sixDimensionalMgonalPyramidal: SixDimensionalMgonalPyramidalConfig;
 };
 
-export type MultidimensionalMappedTypeStrategy = MappedTypeStrategy<MultiDimensionalConfigMap>;
+export type MultiDimensionalMappedTypeStrategy = MappedTypeStrategy<MultiDimensionalConfigMap>;
 
-export const multiDimensionalMapStrategy: MultidimensionalMappedTypeStrategy = {
+export const multiDimensionalMapStrategy: MultiDimensionalMappedTypeStrategy = {
   biquadratic: new BiquadraticGenerator(),
   centeredHyperOctahedral: new CenteredHyperOctahedralGenerator(),
   centeredPolytope: new CenteredPolytopeGenerator(),
