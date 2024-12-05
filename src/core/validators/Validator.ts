@@ -15,7 +15,7 @@ export class Validator {
   static validateStart(start: bigint | undefined) {
     if (start !== undefined) {
       if (typeof start !== "bigint") {
-        throw new Error(ERROR_MESSAGE.stepErrorMessage);
+        throw new Error(ERROR_MESSAGE.startErrorMessage);
       }
     }
   }
@@ -26,7 +26,7 @@ export class Validator {
         throw new Error(ERROR_MESSAGE.mFacetsErrorMessage);
       }
       if (m <= 2n) {
-        throw new Error(ERROR_MESSAGE.stepErrorMessage);
+        throw new Error(ERROR_MESSAGE.mFacetsErrorMessage);
       }
     }
   }
