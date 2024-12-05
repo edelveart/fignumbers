@@ -1,13 +1,16 @@
-import type { MfacetsStepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type {
+  MfacetsStepParameterConfig,
+  StartStepMfacetsParameterConfig,
+} from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type KDimensionalHyperCubeConfig = MfacetsStepParameterConfig;
+export type KDimensionalHyperCubeConfig = StartStepMfacetsParameterConfig;
 
 export class KDimensionalHyperCubeGenerator
   implements INumberGeneratorStrategy<KDimensionalHyperCubeConfig>
 {
-  *generate({ step = 1, m = 5 }: KDimensionalHyperCubeConfig): Generator<number> {
-    let delta = 1;
+  *generate({ start = 1, step = 1, m = 5 }: KDimensionalHyperCubeConfig): Generator<number> {
+    let delta = start;
     while (true) {
       yield delta ** m;
       delta += step;
