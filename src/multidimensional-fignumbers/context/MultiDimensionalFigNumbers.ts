@@ -9,7 +9,7 @@ export class MultiDimensionalFigNumbers {
   static generate<KMap extends keyof MultiDimensionalConfigMap>(
     strategyName: KMap,
     config: MultiDimensionalConfigMap[KMap],
-  ): Generator<number> {
+  ): Generator<bigint> {
     if (CONFIG_CONSTANTS.step in config) {
       Validator.validateStep(config.step);
     }
