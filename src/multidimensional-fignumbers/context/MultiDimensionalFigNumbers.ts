@@ -3,7 +3,7 @@ import { Validator } from "../../core/validators/Validator.js";
 import {
   multiDimensionalMapStrategy,
   type MultiDimensionalConfigMap,
-} from "../mapped-types/MultidimensionalMappedTypes.js";
+} from "../mapped-types/MultiDimensionalMappedTypes.js";
 
 export class MultiDimensionalFigNumbers {
   static generate<KMap extends keyof MultiDimensionalConfigMap>(

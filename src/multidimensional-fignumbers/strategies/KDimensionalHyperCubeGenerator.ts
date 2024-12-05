@@ -1,7 +1,4 @@
-import type {
-  MfacetsStepParameterConfig,
-  StartStepMfacetsParameterConfig,
-} from "../../core/types/ConfigTypes.js";
+import type { StartStepMfacetsParameterConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
 export type KDimensionalHyperCubeConfig = StartStepMfacetsParameterConfig;
