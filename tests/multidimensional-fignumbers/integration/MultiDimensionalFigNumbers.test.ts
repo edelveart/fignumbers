@@ -1,14 +1,68 @@
-import { expect, it, describe } from "vitest";
+import { it, describe } from "vitest";
 import { MultiDimensionalFigNumbers } from "../../../src/index";
-import { createArrOfFigNumbers } from "../../utils/helperGeneratorContext";
+import { compareExpectToEqual } from "../../utils/helperGeneratorContext";
 
 describe("MultiDimensional Figurate Numbers Generation", () => {
   it("should return the sequence of pentatope numbers", () => {
-    const generator = MultiDimensionalFigNumbers.generate("pentatope", { step: 1 });
-    const arrOfFigNumbers = createArrOfFigNumbers(25, generator);
-    expect(arrOfFigNumbers).toEqual([
-      1, 5, 15, 35, 70, 126, 210, 330, 495, 715, 1001, 1365, 1820, 2380, 3060, 3876, 4845, 5985,
-      7315, 8855, 10626, 12650, 14950, 17550, 20475,
-    ]);
+    compareExpectToEqual(
+      MultiDimensionalFigNumbers.generate("pentatope", {}),
+      [
+        1, 5, 15, 35, 70, 126, 210, 330, 495, 715, 1001, 1365, 1820, 2380, 3060, 3876, 4845, 5985,
+        7315, 8855, 10626, 12650, 14950, 17550, 20475,
+      ],
+    );
+  });
+
+  it("should return the sequence of k dimensional hyper cube numbers numbers", () => {
+    compareExpectToEqual(
+      MultiDimensionalFigNumbers.generate("kDimensionalHyperCube", { m: 19n, start: -23n }),
+      [
+        -74615470927590710561908487n,
+        -32064977213018365645815808n,
+        -13248496640331026125580781n,
+        -5242880000000000000000000n,
+        -1978419655660313589123979n,
+        -708235345355337676357632n,
+        -239072435685151324847153n,
+        -75557863725914323419136n,
+        -22168378200531005859375n,
+        -5976303958948914397184n,
+        -1461920290375446110677n,
+        -319479999370622926848n,
+        -61159090448414546291n,
+        -10000000000000000000n,
+        -1350851717672992089n,
+        -144115188075855872n,
+        -11398895185373143n,
+        -609359740010496n,
+        -19073486328125n,
+        -274877906944n,
+        -1162261467n,
+        -524288n,
+        -1n,
+        0n,
+        1n,
+        524288n,
+        1162261467n,
+        274877906944n,
+        19073486328125n,
+        609359740010496n,
+        11398895185373143n,
+        144115188075855872n,
+        1350851717672992089n,
+        10000000000000000000n,
+        61159090448414546291n,
+        319479999370622926848n,
+        1461920290375446110677n,
+        5976303958948914397184n,
+        22168378200531005859375n,
+        75557863725914323419136n,
+        239072435685151324847153n,
+        708235345355337676357632n,
+        1978419655660313589123979n,
+        5242880000000000000000000n,
+        13248496640331026125580781n,
+      ],
+    );
   });
 });
