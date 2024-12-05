@@ -1,5 +1,5 @@
 export * from "./CenteredDodecahedronGenerator.js";
-export * from "./CenteredIcosahedronGenertor.js";
+export * from "./CenteredIcosahedronGenerator.js";
 export * from "./CenteredMgonalPyramidalGenerator.js";
 export * from "./CenteredMgonalPyramidGenerator.js";
 export * from "./CenteredOctahedronGenerator.js";
