@@ -6,10 +6,10 @@ export type CenteredTruncatedCubeConfig = StepParameterConfig;
 export class CenteredTruncatedCubeGenerator
   implements INumberGeneratorStrategy<CenteredTruncatedCubeConfig>
 {
-  *generate({ step = 1 }: CenteredTruncatedCubeConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CenteredTruncatedCubeConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield ((2 * delta - 1) * (23 * delta ** 2 - 23 * delta + 3)) / 3;
+      yield ((2n * delta - 1n) * (23n * delta ** 2n - 23n * delta + 3n)) / 3n;
       delta += step;
     }
   }

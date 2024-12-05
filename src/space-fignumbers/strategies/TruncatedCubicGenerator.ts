@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type TruncatedCubicConfig = StepParameterConfig;
 
 export class TruncatedCubicGenerator implements INumberGeneratorStrategy<TruncatedCubicConfig> {
-  *generate({ step = 1 }: TruncatedCubicConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: TruncatedCubicConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield delta ** 3;
+      yield delta ** 3n;
       delta += step;
     }
   }

@@ -6,10 +6,10 @@ export type CenteredDodecahedronConfig = StepParameterConfig;
 export class CenteredDodecahedronGenerator
   implements INumberGeneratorStrategy<CenteredDodecahedronConfig>
 {
-  *generate({ step = 1 }: CenteredDodecahedronConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CenteredDodecahedronConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (2 * delta - 1) * (3 * delta ** 2 - 3 * delta + 1);
+      yield (2n * delta - 1n) * (3n * delta ** 2n - 3n * delta + 1n);
       delta += step;
     }
   }

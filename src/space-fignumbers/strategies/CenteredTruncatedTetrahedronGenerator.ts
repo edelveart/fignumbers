@@ -6,10 +6,10 @@ export type CenteredTruncatedTetrahedronConfig = StepParameterConfig;
 export class CenteredTruncatedTetrahedronGenerator
   implements INumberGeneratorStrategy<CenteredTruncatedTetrahedronConfig>
 {
-  *generate({ step = 1 }: CenteredTruncatedTetrahedronConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CenteredTruncatedTetrahedronConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield ((2 * delta - 1) * (7 * delta ** 2 - 7 * delta + 3)) / 3;
+      yield ((2n * delta - 1n) * (7n * delta ** 2n - 7n * delta + 3n)) / 3n;
       delta += step;
     }
   }

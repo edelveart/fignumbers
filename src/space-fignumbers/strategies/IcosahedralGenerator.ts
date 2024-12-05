@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type IcosahedralConfig = StepParameterConfig;
 
 export class IcosahedralGenerator implements INumberGeneratorStrategy<IcosahedralConfig> {
-  *generate({ step = 1 }: IcosahedralConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: IcosahedralConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (5 * delta ** 2 - 5 * delta + 2)) / 2;
+      yield (delta * (5n * delta ** 2n - 5n * delta + 2n)) / 2n;
       delta += step;
     }
   }

@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type TetrahedralConfig = StepParameterConfig;
 
 export class TetrahedralGenerator implements INumberGeneratorStrategy<TetrahedralConfig> {
-  *generate({ step = 1 }: TetrahedralConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: TetrahedralConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (delta + 1) * (delta + 2)) / 6;
+      yield (delta * (delta + 1n) * (delta + 2n)) / 6n;
       delta += step;
     }
   }

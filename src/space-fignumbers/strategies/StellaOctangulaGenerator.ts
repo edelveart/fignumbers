@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type StellaOctangulaConfig = StepParameterConfig;
 
 export class StellaOctangulaGenerator implements INumberGeneratorStrategy<StellaOctangulaConfig> {
-  *generate({ step = 1 }: StellaOctangulaConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: StellaOctangulaConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield delta * (2 * delta ** 2 - 1);
+      yield delta * (2n * delta ** 2n - 1n);
       delta += step;
     }
   }

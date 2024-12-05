@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type OctahedralConfig = StepParameterConfig;
 
 export class OctahedralGenerator implements INumberGeneratorStrategy<OctahedralConfig> {
-  *generate({ step = 1 }: OctahedralConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: OctahedralConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (2 * delta ** 2 + 1)) / 3;
+      yield (delta * (2n * delta ** 2n + 1n)) / 3n;
       delta += step;
     }
   }

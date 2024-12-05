@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type DodecahedralConfig = StepParameterConfig;
 
 export class DodecahedralGenerator implements INumberGeneratorStrategy<DodecahedralConfig> {
-  *generate({ step = 1 }: DodecahedralConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: DodecahedralConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (3 * delta - 1) * (3 * delta - 2)) / 2;
+      yield (delta * (3n * delta - 1n) * (3n * delta - 2n)) / 2n;
       delta += step;
     }
   }

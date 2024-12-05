@@ -6,10 +6,10 @@ export type CenteredMgonalPyramidConfig = MfacetsStepParameterConfig;
 export class CenteredMgonalPyramidGenerator
   implements INumberGeneratorStrategy<CenteredMgonalPyramidConfig>
 {
-  *generate({ step = 1, m = 3 }: CenteredMgonalPyramidConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n, m = 3n }: CenteredMgonalPyramidConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield ((m - 1) * ((delta - 1) * delta * (2 * delta - 1))) / 6 + (2 * delta - 1);
+      yield ((m - 1n) * ((delta - 1n) * delta * (2n * delta - 1n))) / 6n + (2n * delta - 1n);
       delta += step;
     }
   }

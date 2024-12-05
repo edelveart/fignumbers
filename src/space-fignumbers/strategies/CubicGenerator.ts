@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type CubicConfig = StepParameterConfig;
 
 export class CubicGenerator implements INumberGeneratorStrategy<CubicConfig> {
-  *generate({ step = 1 }: CubicConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CubicConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield delta ** 3;
+      yield delta ** 3n;
       delta += step;
     }
   }

@@ -6,10 +6,10 @@ export type CenteredOctahedronConfig = StepParameterConfig;
 export class CenteredOctahedronGenerator
   implements INumberGeneratorStrategy<CenteredOctahedronConfig>
 {
-  *generate({ step = 1 }: CenteredOctahedronConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CenteredOctahedronConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield ((2 * delta - 1) * (2 * delta ** 2 - 2 * delta + 3)) / 3;
+      yield ((2n * delta - 1n) * (2n * delta ** 2n - 2n * delta + 3n)) / 3n;
       delta += step;
     }
   }

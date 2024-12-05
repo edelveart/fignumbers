@@ -6,10 +6,10 @@ export type CenteredIcosahedronConfig = StepParameterConfig;
 export class CenteredIcosahedronGenerator
   implements INumberGeneratorStrategy<CenteredIcosahedronConfig>
 {
-  *generate({ step = 1 }: CenteredIcosahedronConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CenteredIcosahedronConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield ((2 * delta - 1) * (5 * delta ** 2 - 5 * delta + 3)) / 3;
+      yield ((2n * delta - 1n) * (5n * delta ** 2n - 5n * delta + 3n)) / 3n;
       delta += step;
     }
   }

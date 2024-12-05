@@ -6,10 +6,10 @@ export type TruncatedTetrahedralConfig = StepParameterConfig;
 export class TruncatedTetrahedralGenerator
   implements INumberGeneratorStrategy<TruncatedTetrahedralConfig>
 {
-  *generate({ step = 1 }: TruncatedTetrahedralConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: TruncatedTetrahedralConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield ((23 * delta ** 2 - 27 * delta + 10) * delta) / 6;
+      yield ((23n * delta ** 2n - 27n * delta + 10n) * delta) / 6n;
       delta += step;
     }
   }

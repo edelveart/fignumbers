@@ -6,10 +6,10 @@ export type TruncatedOctahedralConfig = StepParameterConfig;
 export class TruncatedOctahedralGenerator
   implements INumberGeneratorStrategy<TruncatedOctahedralConfig>
 {
-  *generate({ step = 1 }: TruncatedOctahedralConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: TruncatedOctahedralConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (2 * delta ** 2 + 1)) / 3;
+      yield (delta * (2n * delta ** 2n + 1n)) / 3n;
       delta += step;
     }
   }
