@@ -8,7 +8,7 @@ export * from "./HyperIcosahedralGenerator.js";
 export * from "./HyperOctahedralGenerator.js";
 export * from "./KDimensionalCenteredHyperCubeGenerator.js";
 export * from "./KDimensionalHyperCubeGenerator.js";
-export * from "./KDimensionalHypertetrahedronGenerator.js";
+export * from "./KDimensionalHyperTetrahedronGenerator.js";
 export * from "./NexusGenerator.js";
 export * from "./PentatopeGenerator.js";
 export * from "./PolyOctahedralGenerator.js";
