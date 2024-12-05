@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type CrossConfig = StepParameterConfig;
 
 export class CrossGenerator implements INumberGeneratorStrategy<CrossConfig> {
-  *generate({ step = 1 }: CrossConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CrossConfig): Generator<bigint> {
+    let delta: bigint = 1n;
     while (true) {
-      yield 4 * delta - 3;
+      yield 4n * delta - 3n;
       delta += step;
     }
   }
