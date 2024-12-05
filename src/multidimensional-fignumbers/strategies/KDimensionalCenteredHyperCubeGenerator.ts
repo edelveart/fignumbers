@@ -6,10 +6,10 @@ export type KDimensionalCenteredHyperCubeConfig = MfacetsStepParameterConfig;
 export class KDimensionalCenteredHyperCubeGenerator
   implements INumberGeneratorStrategy<KDimensionalCenteredHyperCubeConfig>
 {
-  *generate({ step = 1, m = 4 }: KDimensionalCenteredHyperCubeConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n, m = 4n }: KDimensionalCenteredHyperCubeConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield delta ** m + (delta - 1) ** m;
+      yield delta ** m + (delta - 1n) ** m;
       delta += step;
     }
   }

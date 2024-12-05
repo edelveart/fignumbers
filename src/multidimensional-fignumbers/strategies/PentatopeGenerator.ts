@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type PentatopeConfig = StepParameterConfig;
 
 export class PentatopeGenerator implements INumberGeneratorStrategy<PentatopeConfig> {
-  *generate({ step = 1 }: PentatopeConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: PentatopeConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (delta + 1) * (delta + 2) * (delta + 3)) / 24;
+      yield (delta * (delta + 1n) * (delta + 2n) * (delta + 3n)) / 24n;
       delta += step;
     }
   }

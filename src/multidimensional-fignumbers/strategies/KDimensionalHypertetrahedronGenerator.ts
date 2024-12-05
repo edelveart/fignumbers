@@ -7,8 +7,8 @@ export type KDimensionalHyperTetrahedronConfig = MfacetsStepParameterConfig;
 export class KDimensionalHyperTetrahedronGenerator
   implements INumberGeneratorStrategy<KDimensionalHyperTetrahedronConfig>
 {
-  *generate({ step = 1, m = 4 }: KDimensionalHyperTetrahedronConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n, m = 4n }: KDimensionalHyperTetrahedronConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
       yield risingFactorial(delta, m) / factorialIter(m);
       delta += step;

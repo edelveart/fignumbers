@@ -6,10 +6,10 @@ export type FourDimensionalMgonalPyramidalConfig = MfacetsStepParameterConfig;
 export class FourDimensionalMgonalPyramidalGenerator
   implements INumberGeneratorStrategy<FourDimensionalMgonalPyramidalConfig>
 {
-  *generate({ step = 1, m = 4 }: FourDimensionalMgonalPyramidalConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n, m = 4n }: FourDimensionalMgonalPyramidalConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (delta + 1) * (delta + 2) * ((m - 2) * delta - m + 6)) / 24;
+      yield (delta * (delta + 1n) * (delta + 2n) * ((m - 2n) * delta - m + 6n)) / 24n;
       delta += step;
     }
   }

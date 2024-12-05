@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type HyperOctahedralConfig = StepParameterConfig;
 
 export class HyperOctahedralGenerator implements INumberGeneratorStrategy<HyperOctahedralConfig> {
-  *generate({ step = 1 }: HyperOctahedralConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: HyperOctahedralConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta ** 2 * (delta ** 2 + 2)) / 3;
+      yield (delta ** 2n * (delta ** 2n + 2n)) / 3n;
       delta += step;
     }
   }

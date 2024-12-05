@@ -4,11 +4,11 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type NexusConfig = MfacetsStepParameterConfig;
 
 export class NexusGenerator implements INumberGeneratorStrategy<NexusConfig> {
-  *generate({ step = 1, m = 3 }: NexusConfig): Generator<number> {
-    let delta = 1;
-    yield 1;
+  *generate({ step = 1n, m = 3n }: NexusConfig): Generator<bigint> {
+    let delta = 1n;
+    yield 1n;
     while (true) {
-      yield (delta + 1) ** (m + 1) - delta ** (m + 1);
+      yield (delta + 1n) ** (m + 1n) - delta ** (m + 1n);
       delta += step;
     }
   }

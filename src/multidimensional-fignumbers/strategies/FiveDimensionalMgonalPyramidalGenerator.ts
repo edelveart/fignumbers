@@ -6,10 +6,11 @@ export type FiveDimensionalMgonalPyramidalConfig = MfacetsStepParameterConfig;
 export class FiveDimensionalMgonalPyramidalGenerator
   implements INumberGeneratorStrategy<FiveDimensionalMgonalPyramidalConfig>
 {
-  *generate({ step = 1, m = 4 }: FiveDimensionalMgonalPyramidalConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n, m = 4n }: FiveDimensionalMgonalPyramidalConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (delta * (delta + 1) * (delta + 2) * (delta + 3) * ((m - 2) * delta - m + 7)) / 120;
+      yield (delta * (delta + 1n) * (delta + 2n) * (delta + 3n) * ((m - 2n) * delta - m + 7n)) /
+        120n;
       delta += step;
     }
   }

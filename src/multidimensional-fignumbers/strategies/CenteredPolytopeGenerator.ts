@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type CenteredPolytopeConfig = StepParameterConfig;
 
 export class CenteredPolytopeGenerator implements INumberGeneratorStrategy<CenteredPolytopeConfig> {
-  *generate({ step = 1 }: CenteredPolytopeConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: CenteredPolytopeConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield (5 * delta ** 4 - 10 * delta ** 3 + 55 * delta ** 2 - 50 * delta + 24) / 24;
+      yield (5n * delta ** 4n - 10n * delta ** 3n + 55n * delta ** 2n - 50n * delta + 24n) / 24n;
       delta += step;
     }
   }

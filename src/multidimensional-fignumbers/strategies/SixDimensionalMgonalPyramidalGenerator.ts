@@ -6,16 +6,16 @@ export type SixDimensionalMgonalPyramidalConfig = MfacetsStepParameterConfig;
 export class SixDimensionalMgonalPyramidalGenerator
   implements INumberGeneratorStrategy<SixDimensionalMgonalPyramidalConfig>
 {
-  *generate({ step = 1, m = 4 }: SixDimensionalMgonalPyramidalConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n, m = 4n }: SixDimensionalMgonalPyramidalConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
       yield (delta *
-        (delta + 1) *
-        (delta + 2) *
-        (delta + 3) *
-        (delta + 4) *
-        ((m - 2) * delta - m + 8)) /
-        720;
+        (delta + 1n) *
+        (delta + 2n) *
+        (delta + 3n) *
+        (delta + 4n) *
+        ((m - 2n) * delta - m + 8n)) /
+        720n;
       delta += step;
     }
   }
