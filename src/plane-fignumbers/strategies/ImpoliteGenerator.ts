@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type ImpoliteConfig = StepParameterConfig;
 
 export class ImpoliteGenerator implements INumberGeneratorStrategy<ImpoliteConfig> {
-  *generate({ step = 1 }: ImpoliteConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: ImpoliteConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield 2 ** delta;
+      yield 2n ** delta;
       delta += step;
     }
   }
