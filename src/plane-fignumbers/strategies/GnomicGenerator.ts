@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type GnomicConfig = StepParameterConfig;
 
 export class GnomicGenerator implements INumberGeneratorStrategy<GnomicConfig> {
-  *generate({ step = 1 }: GnomicConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: GnomicConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield 2 * delta - 1;
+      yield 2n * delta - 1n;
       delta += step;
     }
   }
