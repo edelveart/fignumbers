@@ -9,3 +9,7 @@ export const createArrOfFigNumbers = (
   }
   return numberSequence;
 };
+
+export const convertNumbersToBigInt = (listOfFigNumbers: number[]) => {
+  return [...listOfFigNumbers].map((num) => BigInt(num));
+};
