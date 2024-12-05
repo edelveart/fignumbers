@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type PolygonalConfig = StartStepMfacetsParameterConfig;
 
 export class PolygonalGenerator implements INumberGeneratorStrategy<PolygonalConfig> {
-  *generate({ start = 1, step = 1, m = 3 }: PolygonalConfig): Generator<number> {
+  *generate({ start = 1n, step = 1n, m = 3n }: PolygonalConfig): Generator<bigint> {
     let delta = start;
     while (true) {
-      yield ((m - 2) * delta ** 2 - (m - 4) * delta) / 2;
+      yield ((m - 2n) * delta ** 2n - (m - 4n) * delta) / 2n;
       delta += step;
     }
   }
