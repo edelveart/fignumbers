@@ -6,7 +6,7 @@ export class PlaneFigNumbers {
   static generate<KMap extends keyof PlaneConfigMap>(
     strategyName: KMap,
     config: PlaneConfigMap[KMap],
-  ): Generator<number> {
+  ): Generator<bigint> {
     if (CONFIG_CONSTANTS.step in config) {
       Validator.validateStep(config.step);
     }
