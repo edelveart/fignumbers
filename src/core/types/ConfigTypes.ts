@@ -7,7 +7,7 @@ import { CONFIG_CONSTANTS } from "./configConstants.js";
 
 //  */
 export type StepParameterConfig = {
-  [CONFIG_CONSTANTS.step]?: number;
+  [CONFIG_CONSTANTS.step]?: bigint;
 };
 
 /**
@@ -16,7 +16,7 @@ export type StepParameterConfig = {
  * @default step: 1, m: 3
  */
 export type MfacetsStepParameterConfig = StepParameterConfig & {
-  [CONFIG_CONSTANTS.m]?: number;
+  [CONFIG_CONSTANTS.m]?: bigint;
 };
 
 /**
@@ -25,5 +25,5 @@ export type MfacetsStepParameterConfig = StepParameterConfig & {
  * @default start: 1, step: 1, m: 3
  */
 export type StartStepMfacetsParameterConfig = MfacetsStepParameterConfig & {
-  [CONFIG_CONSTANTS.start]?: number;
+  [CONFIG_CONSTANTS.start]?: bigint;
 };
