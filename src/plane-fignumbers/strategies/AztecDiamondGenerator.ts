@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type AztecDiamondConfig = StepParameterConfig;
 
 export class AztecDiamondGenerator implements INumberGeneratorStrategy<AztecDiamondConfig> {
-  *generate({ step = 1 }: AztecDiamondConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: AztecDiamondConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield 2 * delta * (delta + 1);
+      yield 2n * delta * (delta + 1n);
       delta += step;
     }
   }
