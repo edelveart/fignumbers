@@ -1,5 +1,5 @@
 export const ERROR_MESSAGE = {
-  stepErrorMessage: "Parameter 'step' must be an integer greater than or equal to 1",
-  startErrorMessage: "Parameter 'start' must be an integer",
-  mFacetsErrorMessage: "Parameter 'm' must be an integer greater than or equal to 3",
+  stepErrorMessage: "Parameter 'step' must be a BigInt greater than or equal to 1n",
+  startErrorMessage: "Parameter 'start' must be a BigInt",
+  mFacetsErrorMessage: "Parameter 'm' must be a BigInt greater than or equal to 3n",
 } as const;
