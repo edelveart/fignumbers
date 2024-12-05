@@ -4,10 +4,10 @@ import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGene
 export type BiquadraticConfig = StepParameterConfig;
 
 export class BiquadraticGenerator implements INumberGeneratorStrategy<BiquadraticConfig> {
-  *generate({ step = 1 }: BiquadraticConfig): Generator<number> {
-    let delta = 1;
+  *generate({ step = 1n }: BiquadraticConfig): Generator<bigint> {
+    let delta = 1n;
     while (true) {
-      yield delta ** 4;
+      yield delta ** 4n;
       delta += step;
     }
   }
