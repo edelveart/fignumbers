@@ -1,5 +1,5 @@
 {
-  "name": "ts-fignumbers",
+  "name": "fignumbers",
   "version": "0.1.0",
   "description": "A complete TypeScript library for generating figurate numbers in various dimensions.",
   "type": "module",
@@ -16,18 +16,18 @@
   "keywords": [
     "figurate numbers",
     "generators",
-    "mathematics",
     "infinite sequences",
-    "number theory"
+    "number theory",
+    "mathematics"
   ],
   "author": "Edgar Armando Delgado Vega",
-  "homepage": "https://github.com/edelveart/ts-fignumbers",
+  "homepage": "https://github.com/edelveart/fignumbers",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edelveart/ts-fignumbers.git"
+    "url": "git+https://github.com/edelveart/fignumbers.git"
   },
   "bugs": {
-    "url": "https://github.com/edelveart/ts-fignumbers/issues"
+    "url": "https://github.com/edelveart/fignumbers/issues"
   },
   "files": [
     "dist"
