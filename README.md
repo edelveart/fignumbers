@@ -1,6 +1,6 @@
 # Fignumbers
 
-**Fignumbers** is a TypeScript library for generating figurate numbers, inspired by the book *Figurate Numbers* by Elena Deza and Michel Deza. It implements infinite figurate number sequences based on their 2012 work.
+**Fignumbers** is a TypeScript library for generating figurate numbers, inspired by the book _Figurate Numbers_ by Elena Deza and Michel Deza. It implements infinite figurate number sequences based on their 2012 work.
 
 ## Why fignumbers? 🚀
 
@@ -33,12 +33,11 @@ npm install fignumbers
 ## Usage 🔥
 
 ```ts
-
 // 1. Import the library
-import { SpaceFigNumbers } from 'fignumbers';
+import { SpaceFigNumbers } from "fignumbers";
 
 // 2. Configure parameters for the generator (use bigints for precision!)
-const config = { start: 1n, m: 5n, step: 1n }
+const config = { start: 1n, m: 5n, step: 1n };
 
 // 3. Choose the type of space figurate number you want (pyramidal, cubic, etc.)
 const pyramidalNumbers = SpaceFigNumbers.generate("pyramidal", config);
@@ -49,7 +48,6 @@ for (let i = 0; i < 7; i++) {
   const nextNumber = pyramidalNumbers.next().value; // Grab the next number in the sequence
   console.log(`Number ${i + 1}: ${nextNumber}`);
 }
-
 ```
 
 ## Expected Output 🌟
