@@ -1,11 +1,11 @@
 # Fignumbers
 
-**Fignumbers** is a TypeScript library for generating figurate numbers, inspired by the book *Figurate Numbers* by Elena and Michel Deza. It implements 235 infinite figurate number sequences based on their 2012 work.
+**Fignumbers** is a TypeScript library for generating figurate numbers, inspired by the book *Figurate Numbers* by Elena Deza and Michel Deza. It implements infinite figurate number sequences based on their 2012 work.
 
 ## Why fignumbers? 🚀
 
-    1. Rich variety: Covers a broad range of figurate number sequences, for use in mathematical projects, visualization, algorithmic applications, or any work involving figurate number sequences.
-    2. Efficient and precise: Optimized for TypeScript, taking full advantage of its features to enhance performance and type safety.
+1. Rich variety: Covers a broad range of figurate number sequences, for use in mathematical projects, visualization, algorithmic applications, or any work involving figurate number sequences.
+2. Efficient and precise: Optimized for TypeScript, taking full advantage of its features to enhance performance and type safety.
 
 ### BigInt Support Required ⚠️
 
