@@ -4,9 +4,9 @@
 ![NPM Type Definitions](https://img.shields.io/npm/types/fignumbers)
 ![NPM License](https://img.shields.io/npm/l/fignumbers)
 
-**Fignumbers** is a TypeScript library for generating *figurate numbers*, numbers that can be visualized as geometric shapes.
+**Fignumbers** is a comprehensive TypeScript library designed to generate and explore *figurate numbers*, numbers that can be visualized as geometric shapes in 2D, 3D, and higher-dimensional spaces.
 
-Based on Figurate Numbers (2012) by Elena and Michel Deza, it implements a variety of infinite sequences corresponding to shapes in 2D, 3D, and beyond.
+Based on the book Figurate Numbers (2012) by Elena and Michel Deza, this library supports a wide range of infinite sequences.
 
 ## Why fignumbers? 🚀
 
@@ -15,16 +15,15 @@ Based on Figurate Numbers (2012) by Elena and Michel Deza, it implements a varie
 
 ### BigInt Support Required ⚠️
 
-Fignumbers uses `BigInt` to handle large integers beyond the `Number` type limit `(2^53 - 1)`.
-Ensure your environment supports **BigInt** before using this library.
+Fignumbers utilizes `BigInt` to manage large integers that exceed the `Number` type limit of `(2^53 - 1)`. Ensure that your environment supports **BigInt** before using this library.
 
 ## Three main classes ⚙️
 
-**Fignumbers** is structured around three main classes based on their spatial dimensions (as detailed in the book). These are:
+**Fignumbers** is structured around three main classes, each corresponding to a different spatial dimension, as described in the book:
 
-1. PlaneFigNumbers = 10
-2. SpaceFigNumbers = 19
-3. MultiDimensionalFigNumbers = 15
+1. `PlaneFigNumbers` = 10
+2. `SpaceFigNumbers` = 19
+3. `MultiDimensionalFigNumbers` = 17
 
 Each class offers specialized methods for generating different types of figurate numbers.
 
