@@ -244,4 +244,14 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
       ],
     );
   });
+
+  it("should return the sequence of centered biquadratic numbers", () => {
+    compareExpectToEqual(
+      MultiDimensionalFigNumbers.generate("centeredBiquadratic", {}),
+      [
+        1, 17, 97, 337, 881, 1921, 3697, 6497, 10657, 16561, 24641, 35377, 49297, 66977, 89041,
+        116161, 149057, 188497, 235297, 290321,
+      ],
+    );
+  });
 });
