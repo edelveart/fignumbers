@@ -14,7 +14,7 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of nexus numbers", () => {
-    compareExpectToEqual(MultiDimensionalFigNumbers.generate("nexus", { m: 24n }), [
+    compareExpectToEqual(MultiDimensionalFigNumbers.generate("nexus", { k: 24n }), [
       1n,
       33554431n,
       847255055011n,
@@ -97,7 +97,7 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
 
   it("should return the sequence of k dimensional hyper cube numbers", () => {
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalHyperCube", { m: 19n, start: -23n }),
+      MultiDimensionalFigNumbers.generate("kDimensionalHyperCube", { k: 19n, start: -23n }),
       [
         -74615470927590710561908487n,
         -32064977213018365645815808n,
@@ -150,7 +150,7 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
 
   it("should return the sequence of k dimensional centered hyper cube numbers", () => {
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalCenteredHyperCube", { m: 19n }),
+      MultiDimensionalFigNumbers.generate("kDimensionalCenteredHyperCube", { k: 19n }),
       [
         1n,
         524289n,
@@ -188,7 +188,7 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
 
   it("should return the sequence of k dimensional hypertetrahedron numbers", () => {
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalHyperTetrahedron", { m: 14n }),
+      MultiDimensionalFigNumbers.generate("kDimensionalHyperTetrahedron", { k: 14n }),
       [
         1, 15, 120, 680, 3060, 11628, 38760, 116280, 319770, 817190, 1961256, 4457400, 9657700,
         20058300, 40116600, 77558760, 145422675, 265182525, 471435600, 818809200, 1391975640,
