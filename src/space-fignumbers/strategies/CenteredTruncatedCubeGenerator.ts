@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CenteredTruncatedCubeConfig = StepParameterConfig;
+export type CenteredTruncatedCubeConfig = StepConfig;
 
 export class CenteredTruncatedCubeGenerator
   implements INumberGeneratorStrategy<CenteredTruncatedCubeConfig>

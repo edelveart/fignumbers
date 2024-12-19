@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CubicConfig = StepParameterConfig;
+export type CubicConfig = StepConfig;
 
 export class CubicGenerator implements INumberGeneratorStrategy<CubicConfig> {
   *generate({ step = 1n }: CubicConfig): Generator<bigint> {

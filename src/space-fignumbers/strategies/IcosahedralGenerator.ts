@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type IcosahedralConfig = StepParameterConfig;
+export type IcosahedralConfig = StepConfig;
 
 export class IcosahedralGenerator implements INumberGeneratorStrategy<IcosahedralConfig> {
   *generate({ step = 1n }: IcosahedralConfig): Generator<bigint> {

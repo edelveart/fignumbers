@@ -1,7 +1,7 @@
-import type { MfacetsStepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { MConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CenteredMgonalPyramidConfig = MfacetsStepParameterConfig;
+export type CenteredMgonalPyramidConfig = MConfigStepConfig;
 
 export class CenteredMgonalPyramidGenerator
   implements INumberGeneratorStrategy<CenteredMgonalPyramidConfig>

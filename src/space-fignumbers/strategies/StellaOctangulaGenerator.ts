@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type StellaOctangulaConfig = StepParameterConfig;
+export type StellaOctangulaConfig = StepConfig;
 
 export class StellaOctangulaGenerator implements INumberGeneratorStrategy<StellaOctangulaConfig> {
   *generate({ step = 1n }: StellaOctangulaConfig): Generator<bigint> {

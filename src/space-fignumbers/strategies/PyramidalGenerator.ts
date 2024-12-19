@@ -1,7 +1,7 @@
-import type { StartStepMfacetsParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StartConfigMConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type PyramidalConfig = StartStepMfacetsParameterConfig;
+export type PyramidalConfig = StartConfigMConfigStepConfig;
 
 export class PyramidalGenerator implements INumberGeneratorStrategy<PyramidalConfig> {
   *generate({ start = 1n, step = 1n, m = 3n }: PyramidalConfig): Generator<bigint> {

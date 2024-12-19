@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type TruncatedOctahedralConfig = StepParameterConfig;
+export type TruncatedOctahedralConfig = StepConfig;
 
 export class TruncatedOctahedralGenerator
   implements INumberGeneratorStrategy<TruncatedOctahedralConfig>

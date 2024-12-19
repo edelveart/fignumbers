@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type OctahedralConfig = StepParameterConfig;
+export type OctahedralConfig = StepConfig;
 
 export class OctahedralGenerator implements INumberGeneratorStrategy<OctahedralConfig> {
   *generate({ step = 1n }: OctahedralConfig): Generator<bigint> {
