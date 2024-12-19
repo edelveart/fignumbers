@@ -1,14 +1,14 @@
-import type { MConfigStepConfig } from "../../core/types/ConfigTypes.js";
+import type { KConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type NexusConfig = MConfigStepConfig;
+export type NexusConfig = KConfigStepConfig;
 
 export class NexusGenerator implements INumberGeneratorStrategy<NexusConfig> {
-  *generate({ step = 1n, m = 3n }: NexusConfig): Generator<bigint> {
+  *generate({ step = 1n, k = 3n }: NexusConfig): Generator<bigint> {
     let delta = 1n;
     yield 1n;
     while (true) {
-      yield (delta + 1n) ** (m + 1n) - delta ** (m + 1n);
+      yield (delta + 1n) ** (k + 1n) - delta ** (k + 1n);
       delta += step;
     }
   }
