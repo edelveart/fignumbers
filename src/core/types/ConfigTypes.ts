@@ -1,29 +1,19 @@
 import { CONFIG_CONSTANTS } from "./configConstants.js";
 
-// /**
-//  * Basic configuration with an optional `step` value.
-//  * Used by various generator strategies like `PronicGenerator`
-//  * @default step: 1
+type ConfigKeys = keyof typeof CONFIG_CONSTANTS;
 
-//  */
-export type StepParameterConfig = {
-  [CONFIG_CONSTANTS.step]?: bigint;
+type ParamsConfigMappedBigInt<TKey extends ConfigKeys> = {
+  [key in TKey]?: bigint;
 };
 
-/**
- * Extended configuration with `step` and an optional `m` parameter.
- * Used by strategies that require the `m` value.
- * @default step: 1, m: 3
- */
-export type MfacetsStepParameterConfig = StepParameterConfig & {
-  [CONFIG_CONSTANTS.m]?: bigint;
-};
+export type StepConfig = ParamsConfigMappedBigInt<"step">;
 
-/**
- * Extended configuration with `step`, `m`, and an optional `start` parameter.
- * Used by generator strategies like `PolygonalGenerator`.
- * @default start: 1, step: 1, m: 3
- */
-export type StartStepMfacetsParameterConfig = MfacetsStepParameterConfig & {
-  [CONFIG_CONSTANTS.start]?: bigint;
-};
+export type MConfigStepConfig = ParamsConfigMappedBigInt<"step" | "m">;
+
+export type StartConfigMConfigStepConfig = ParamsConfigMappedBigInt<"step" | "m" | "start">;
+
+export type KConfigStepConfig = ParamsConfigMappedBigInt<"step" | "k">;
+
+export type KConfigStartConfigMConfigStepConfig = ParamsConfigMappedBigInt<
+  "step" | "m" | "start" | "k"
+>;
