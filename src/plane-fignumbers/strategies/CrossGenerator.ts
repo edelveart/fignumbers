@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CrossConfig = StepParameterConfig;
+export type CrossConfig = StepConfig;
 
 export class CrossGenerator implements INumberGeneratorStrategy<CrossConfig> {
   *generate({ step = 1n }: CrossConfig): Generator<bigint> {

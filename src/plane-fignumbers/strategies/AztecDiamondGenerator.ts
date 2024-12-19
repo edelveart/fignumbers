@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type AztecDiamondConfig = StepParameterConfig;
+export type AztecDiamondConfig = StepConfig;
 
 export class AztecDiamondGenerator implements INumberGeneratorStrategy<AztecDiamondConfig> {
   *generate({ step = 1n }: AztecDiamondConfig): Generator<bigint> {

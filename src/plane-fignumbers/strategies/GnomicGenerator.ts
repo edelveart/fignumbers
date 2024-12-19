@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type GnomicConfig = StepParameterConfig;
+export type GnomicConfig = StepConfig;
 
 export class GnomicGenerator implements INumberGeneratorStrategy<GnomicConfig> {
   *generate({ step = 1n }: GnomicConfig): Generator<bigint> {

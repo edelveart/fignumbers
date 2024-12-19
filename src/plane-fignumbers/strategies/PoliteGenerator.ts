@@ -1,8 +1,8 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 import { log2BigInt } from "../utils/helpersPlaneFigNumbers.js";
 
-export type PoliteConfig = StepParameterConfig;
+export type PoliteConfig = StepConfig;
 
 export class PoliteGenerator implements INumberGeneratorStrategy<PoliteConfig> {
   *generate({ step = 1n }: PoliteConfig): Generator<bigint> {

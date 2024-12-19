@@ -1,7 +1,7 @@
-import type { StartStepMfacetsParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StartConfigMConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CenteredPolygonalConfig = StartStepMfacetsParameterConfig;
+export type CenteredPolygonalConfig = StartConfigMConfigStepConfig;
 
 export class CenteredPolygonalGenerator
   implements INumberGeneratorStrategy<CenteredPolygonalConfig>

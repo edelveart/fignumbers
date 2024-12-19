@@ -1,7 +1,7 @@
-import type { MfacetsStepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { MConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type PolygramConfig = MfacetsStepParameterConfig;
+export type PolygramConfig = MConfigStepConfig;
 
 export class PolygramGenerator implements INumberGeneratorStrategy<PolygramConfig> {
   *generate({ step = 1n, m = 3n }: PolygramConfig): Generator<bigint> {
