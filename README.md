@@ -52,7 +52,7 @@ for (let i = 0; i < 7; i++) {
 
 ## Expected Output 🌟
 
-```ts
+```txt
 First 7 pyramidal numbers with m = 5n:
   Number 1: 1n
   Number 2: 6n
