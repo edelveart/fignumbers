@@ -16,6 +16,7 @@ import {
   PentatopeGenerator,
   PolyOctahedralGenerator,
   SixDimensionalMgonalPyramidalGenerator,
+  CenteredBiquadraticGenerator,
   type BiquadraticConfig,
   type CenteredHyperOctahedralConfig,
   type CenteredPolytopeConfig,
@@ -31,6 +32,7 @@ import {
   type PentatopeConfig,
   type PolyOctahedralConfig,
   type SixDimensionalMgonalPyramidalConfig,
+  type CenteredBiquadraticConfig,
 } from "../strategies/index.js";
 
 export type MultiDimensionalConfigMap = {
@@ -49,6 +51,7 @@ export type MultiDimensionalConfigMap = {
   pentatope: PentatopeConfig;
   polyOctahedral: PolyOctahedralConfig;
   sixDimensionalMgonalPyramidal: SixDimensionalMgonalPyramidalConfig;
+  centeredBiquadratic: CenteredBiquadraticConfig;
 };
 
 export type MultiDimensionalMappedTypeStrategy = MappedTypeStrategy<MultiDimensionalConfigMap>;
@@ -69,4 +72,5 @@ export const multiDimensionalMapStrategy: MultiDimensionalMappedTypeStrategy = {
   pentatope: new PentatopeGenerator(),
   polyOctahedral: new PolyOctahedralGenerator(),
   sixDimensionalMgonalPyramidal: new SixDimensionalMgonalPyramidalGenerator(),
+  centeredBiquadratic: new CenteredBiquadraticGenerator(),
 };
