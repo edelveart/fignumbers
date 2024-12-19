@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type HyperOctahedralConfig = StepParameterConfig;
+export type HyperOctahedralConfig = StepConfig;
 
 export class HyperOctahedralGenerator implements INumberGeneratorStrategy<HyperOctahedralConfig> {
   *generate({ step = 1n }: HyperOctahedralConfig): Generator<bigint> {

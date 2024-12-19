@@ -1,8 +1,8 @@
-import type { MfacetsStepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { MConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 import { factorialIter, risingFactorial } from "../utils/helpersMultidimensionalFigNumbers.js";
 
-export type KDimensionalHyperTetrahedronConfig = MfacetsStepParameterConfig;
+export type KDimensionalHyperTetrahedronConfig = MConfigStepConfig;
 
 export class KDimensionalHyperTetrahedronGenerator
   implements INumberGeneratorStrategy<KDimensionalHyperTetrahedronConfig>

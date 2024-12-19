@@ -1,7 +1,7 @@
-import type { MfacetsStepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { MConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type NexusConfig = MfacetsStepParameterConfig;
+export type NexusConfig = MConfigStepConfig;
 
 export class NexusGenerator implements INumberGeneratorStrategy<NexusConfig> {
   *generate({ step = 1n, m = 3n }: NexusConfig): Generator<bigint> {

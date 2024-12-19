@@ -1,7 +1,7 @@
-import type { MfacetsStepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { MConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type SixDimensionalMgonalPyramidalConfig = MfacetsStepParameterConfig;
+export type SixDimensionalMgonalPyramidalConfig = MConfigStepConfig;
 
 export class SixDimensionalMgonalPyramidalGenerator
   implements INumberGeneratorStrategy<SixDimensionalMgonalPyramidalConfig>

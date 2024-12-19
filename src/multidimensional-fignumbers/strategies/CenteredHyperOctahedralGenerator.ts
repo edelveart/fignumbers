@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CenteredHyperOctahedralConfig = StepParameterConfig;
+export type CenteredHyperOctahedralConfig = StepConfig;
 
 export class CenteredHyperOctahedralGenerator
   implements INumberGeneratorStrategy<CenteredHyperOctahedralConfig>

@@ -24,3 +24,5 @@ export * from "./CenteredHyperOctahedralGenerator.js";
 export * from "./NexusGenerator.js";
 
 export * from "./CenteredBiquadraticGenerator.js";
+
+export * from "./KDimensionalMgonalPyramidalGenerator.js";

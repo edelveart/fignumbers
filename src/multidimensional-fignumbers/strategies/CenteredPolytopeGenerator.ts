@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CenteredPolytopeConfig = StepParameterConfig;
+export type CenteredPolytopeConfig = StepConfig;
 
 export class CenteredPolytopeGenerator implements INumberGeneratorStrategy<CenteredPolytopeConfig> {
   *generate({ step = 1n }: CenteredPolytopeConfig): Generator<bigint> {

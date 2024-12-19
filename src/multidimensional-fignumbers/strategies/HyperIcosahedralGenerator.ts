@@ -1,7 +1,7 @@
-import type { StepParameterConfig } from "../../core/types/ConfigTypes.js";
+import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type HyperIcosahedralConfig = StepParameterConfig;
+export type HyperIcosahedralConfig = StepConfig;
 
 export class HyperIcosahedralGenerator implements INumberGeneratorStrategy<HyperIcosahedralConfig> {
   *generate({ step = 1n }: HyperIcosahedralConfig): Generator<bigint> {
