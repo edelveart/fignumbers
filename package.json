@@ -14,11 +14,11 @@
     "ci": "npm run build && npm run check-format && npm run check-exports && npm run test"
   },
   "keywords": [
-    "figurate numbers",
+    "figurate-numbers",
     "generators",
-    "infinite sequences",
-    "number theory",
-    "mathematics"
+    "infinite-sequences",
+    "number-theory",
+    "mathematics-library"
   ],
   "author": "Edgar Armando Delgado Vega",
   "homepage": "https://github.com/edelveart/fignumbers",
