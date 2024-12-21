@@ -30,4 +30,15 @@ export class Validator {
       }
     }
   }
+
+  static validateKDimension(k: bigint | undefined) {
+    if (k !== undefined) {
+      if (typeof k !== "bigint") {
+        throw new Error(ERROR_MESSAGE.kDimensionErrorMessage);
+      }
+      if (k < 4n) {
+        throw new Error(ERROR_MESSAGE.kDimensionErrorMessage);
+      }
+    }
+  }
 }
