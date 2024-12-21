@@ -22,6 +22,8 @@ export * from "./KDimensionalCenteredHyperCubeGenerator.js";
 
 export * from "./CenteredPolytopeGenerator.js";
 
+export * from "./KDimensionalCenteredHyperTetrahedronGenerator.js";
+
 export * from "./CenteredHyperOctahedralGenerator.js";
 export * from "./NexusGenerator.js";
 
