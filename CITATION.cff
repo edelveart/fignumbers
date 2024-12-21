@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this software and its documentation, please cite it as below."
+message: "If you use fignumbers and its documentation in your work, please cite it as below."
 authors:
   - family-names: "Delgado Vega"
     given-names: "Edgar Armando"
     orcid: "https://orcid.org/0000-0002-9672-9087"
-title: "fignumbers: A comprehensive TypeScript library designed to generate and explore figurate numbers"
+title: "fignumbers: A TypeScript Library for Generating and Exploring Figurate Numbers"
 version: 0.2.0
 doi:
 date-released: 2024-12-19
