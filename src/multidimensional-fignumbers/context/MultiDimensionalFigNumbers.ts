@@ -19,7 +19,9 @@ export class MultiDimensionalFigNumbers {
     if (CONFIG_CONSTANTS.m in config) {
       Validator.validateMFacets(config.m);
     }
-
+    if (CONFIG_CONSTANTS.k in config) {
+      Validator.validateKDimension(config.k);
+    }
     return multiDimensionalMapStrategy[strategyName].generate(config);
   }
 }
