@@ -29,4 +29,13 @@ describe("MultiDimensional Figurate Numbers Error Validation", () => {
       ).toThrowError(ERROR_MESSAGE.mFacetsErrorMessage);
     });
   });
+
+  it("should throw an error if the 'k' parameter is not a BigInt or is less than 4n", () => {
+    const invalidKDimension = [-45n, 3n, -10n, 23.75];
+    invalidKDimension.forEach((k: unknown | any) => {
+      expect(() =>
+        MultiDimensionalFigNumbers.generate("kDimensionalHyperCube", { k }),
+      ).toThrowError(ERROR_MESSAGE.kDimensionErrorMessage);
+    });
+  });
 });
