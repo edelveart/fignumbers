@@ -19,6 +19,7 @@ import {
   CenteredBiquadraticGenerator,
   KDimensionalMgonalPyramidalGenerator,
   KDimensionalHyperOctahedronGenerator,
+  KDimensionalCenteredHyperTetrahedronGenerator,
   type BiquadraticConfig,
   type CenteredHyperOctahedralConfig,
   type CenteredPolytopeConfig,
@@ -37,6 +38,7 @@ import {
   type CenteredBiquadraticConfig,
   type KDimensionalMgonalPyramidalConfig,
   type KDimensionalHyperOctahedronConfig,
+  type KDimensionalCenteredHyperTetrahedronConfig,
 } from "../strategies/index.js";
 
 export type MultiDimensionalConfigMap = {
@@ -58,6 +60,7 @@ export type MultiDimensionalConfigMap = {
   centeredBiquadratic: CenteredBiquadraticConfig;
   kDimensionalMgonalPyramidal: KDimensionalMgonalPyramidalConfig;
   kDimensionalHyperOctahedron: KDimensionalHyperOctahedronConfig;
+  kDimensionalCenteredHyperTetrahedron: KDimensionalCenteredHyperTetrahedronConfig;
 };
 
 export type MultiDimensionalMappedTypeStrategy = MappedTypeStrategy<MultiDimensionalConfigMap>;
@@ -81,4 +84,5 @@ export const multiDimensionalMapStrategy: MultiDimensionalMappedTypeStrategy = {
   centeredBiquadratic: new CenteredBiquadraticGenerator(),
   kDimensionalMgonalPyramidal: new KDimensionalMgonalPyramidalGenerator(),
   kDimensionalHyperOctahedron: new KDimensionalHyperOctahedronGenerator(),
+  kDimensionalCenteredHyperTetrahedron: new KDimensionalCenteredHyperTetrahedronGenerator(),
 };
