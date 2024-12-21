@@ -10,6 +10,8 @@ export type StepConfig = ParamsConfigMappedBigInt<"step">;
 
 export type MConfigStepConfig = ParamsConfigMappedBigInt<"step" | "m">;
 
+export type StartConfigStepConfig = ParamsConfigMappedBigInt<"start" | "step">;
+
 export type StartConfigMConfigStepConfig = ParamsConfigMappedBigInt<"step" | "m" | "start">;
 
 export type KConfigStepConfig = ParamsConfigMappedBigInt<"step" | "k">;
