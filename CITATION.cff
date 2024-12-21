@@ -5,7 +5,7 @@ authors:
     given-names: "Edgar Armando"
     orcid: "https://orcid.org/0000-0002-9672-9087"
 title: "fignumbers: A TypeScript Library for Generating and Exploring Figurate Numbers"
-version: 0.2.0
+version: 0.3.0
 doi:
 date-released: 2024-12-19
 url: "https://github.com/edelveart/fignumbers"
