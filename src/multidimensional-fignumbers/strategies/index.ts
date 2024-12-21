@@ -6,6 +6,8 @@ export * from "./BiquadraticGenerator.js";
 
 export * from "./KDimensionalHyperCubeGenerator.js";
 
+export * from "./KDimensionalHyperOctahedronGenerator.js";
+
 export * from "./HyperOctahedralGenerator.js";
 export * from "./HyperIcosahedralGenerator.js";
 export * from "./HyperDodecahedralGenerator.js";
