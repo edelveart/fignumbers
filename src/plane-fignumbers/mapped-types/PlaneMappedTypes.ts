@@ -1,5 +1,4 @@
-import type { MappedTypeStrategy } from "../../core/mapped-types/MappedTypeStrategy.js";
-
+import type { MappedTypeConfig } from "../../core/mapped-types/MappedTypeConfig.js";
 import {
   AztecDiamondGenerator,
   CenteredPolygonalGenerator,
@@ -11,35 +10,12 @@ import {
   PolygramGenerator,
   PronicGenerator,
   TruncatedCenteredPolygonalGenerator,
-  type AztecDiamondConfig,
-  type CenteredPolygonalConfig,
-  type CrossConfig,
-  type GnomicConfig,
-  type ImpoliteConfig,
-  type PoliteConfig,
-  type PolygonalConfig,
-  type PolygramConfig,
-  type PronicConfig,
-  type TruncatedCenteredPolygonalConfig,
 } from "../strategies/index.js";
 
-export type PlaneConfigMap = {
-  polygonal: PolygonalConfig;
-  pronic: PronicConfig;
-  polygram: PolygramConfig;
-  polite: PoliteConfig;
-  impolite: ImpoliteConfig;
-  aztecDiamond: AztecDiamondConfig;
-  gnomic: GnomicConfig;
-  cross: CrossConfig;
-  centeredPolygonal: CenteredPolygonalConfig;
-  truncatedCenteredPolygonal: TruncatedCenteredPolygonalConfig;
-};
-
-export type PlaneMappedTypeStrategy = MappedTypeStrategy<PlaneConfigMap>;
-
-export const planeMapStrategy: PlaneMappedTypeStrategy = {
+export const PLANE_MAP_STRATEGY = {
   polygonal: new PolygonalGenerator(),
+  centeredPolygonal: new CenteredPolygonalGenerator(),
+  truncatedCenteredPolygonal: new TruncatedCenteredPolygonalGenerator(),
   pronic: new PronicGenerator(),
   polite: new PoliteGenerator(),
   impolite: new ImpoliteGenerator(),
@@ -47,6 +23,6 @@ export const planeMapStrategy: PlaneMappedTypeStrategy = {
   gnomic: new GnomicGenerator(),
   cross: new CrossGenerator(),
   polygram: new PolygramGenerator(),
-  centeredPolygonal: new CenteredPolygonalGenerator(),
-  truncatedCenteredPolygonal: new TruncatedCenteredPolygonalGenerator(),
-};
+} as const;
+
+export type PlaneConfigMap = MappedTypeConfig<typeof PLANE_MAP_STRATEGY>;
