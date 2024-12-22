@@ -1,11 +1,11 @@
-import type { MConfigStepConfig } from "../../core/types/ConfigTypes.js";
+import type { KConfigMConfigStepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 import {
   pseudoRisingFactorial,
   factorialIter,
 } from "../utils/helpersMultidimensionalFigNumbers.js";
 
-export type KDimensionalMgonalPyramidalConfig = MConfigStepConfig & { k: bigint };
+export type KDimensionalMgonalPyramidalConfig = KConfigMConfigStepConfig;
 
 export class KDimensionalMgonalPyramidalGenerator
   implements INumberGeneratorStrategy<KDimensionalMgonalPyramidalConfig>
