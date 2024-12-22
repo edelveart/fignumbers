@@ -31,7 +31,7 @@ import {
 const baseStrategies = {
   pyramidal: new PyramidalGenerator(),
   mgonalPrism: new MgonalPrismGenerator(),
-  centeredMgonalPyramidal: new CenteredMgonalPyramidalGenerator(), /// FFFFFFFFFF
+  centeredMgonalPyramidal: new CenteredMgonalPyramidalGenerator(),
   centeredMgonalPyramid: new CenteredMgonalPyramidGenerator(),
   centeredTruncatedCube: new CenteredTruncatedCubeGenerator(),
   centeredTruncatedTetrahedron: new CenteredTruncatedTetrahedronGenerator(),
