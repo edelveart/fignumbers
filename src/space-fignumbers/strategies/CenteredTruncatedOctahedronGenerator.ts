@@ -9,7 +9,7 @@ export class CenteredTruncatedOctahedronGenerator
   *generate({ step = 1n }: CenteredTruncatedOctahedronConfig): Generator<bigint> {
     let delta = 1n;
     while (true) {
-      yield ((2n * delta - 1n) * (23n * delta ** 2n - 23n * delta + 3n)) / 3n;
+      yield (2n * delta - 1n) * (5n * delta ** 2n - 5n * delta + 1n);
       delta += step;
     }
   }
