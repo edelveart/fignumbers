@@ -1,7 +1,7 @@
 import { CONFIG_CONSTANTS } from "../../core/types/configConstants.js";
 import { Validator } from "../../core/validators/Validator.js";
 import {
-  multiDimensionalMapStrategy,
+  MULTIDIMENSIONAL_MAP_STRATEGY,
   type MultiDimensionalConfigMap,
 } from "../mapped-types/MultiDimensionalMappedTypes.js";
 
@@ -22,6 +22,6 @@ export class MultiDimensionalFigNumbers {
     if (CONFIG_CONSTANTS.k in config) {
       Validator.validateKDimension(config.k);
     }
-    return multiDimensionalMapStrategy[strategyName].generate(config);
+    return MULTIDIMENSIONAL_MAP_STRATEGY[strategyName].generate(config);
   }
 }
