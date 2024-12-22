@@ -1,4 +1,4 @@
-import { type PlaneConfigMap, planeMapStrategy } from "../mapped-types/PlaneMappedTypes.js";
+import { type PlaneConfigMap, PLANE_MAP_STRATEGY } from "../mapped-types/PlaneMappedTypes.js";
 import { CONFIG_CONSTANTS } from "../../core/types/configConstants.js";
 import { Validator } from "../../core/validators/Validator.js";
 
@@ -17,6 +17,6 @@ export class PlaneFigNumbers {
       Validator.validateMFacets(config.m);
     }
 
-    return planeMapStrategy[strategyName].generate(config);
+    return PLANE_MAP_STRATEGY[strategyName].generate(config);
   }
 }
