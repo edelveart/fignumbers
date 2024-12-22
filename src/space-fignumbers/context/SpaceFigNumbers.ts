@@ -1,6 +1,6 @@
 import { CONFIG_CONSTANTS } from "../../core/types/configConstants.js";
 import { Validator } from "../../core/validators/Validator.js";
-import { spaceMapStrategy, type SpaceConfigMap } from "../mapped-types/SpaceMappedTypes.js";
+import { SPACE_MAP_STRATEGY, type SpaceConfigMap } from "../mapped-types/SpaceMappedTypes.js";
 
 export class SpaceFigNumbers {
   static generate<KMap extends keyof SpaceConfigMap>(
@@ -17,6 +17,6 @@ export class SpaceFigNumbers {
       Validator.validateMFacets(config.m);
     }
 
-    return spaceMapStrategy[strategyName].generate(config);
+    return SPACE_MAP_STRATEGY[strategyName].generate(config);
   }
 }
