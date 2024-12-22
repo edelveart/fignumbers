@@ -1,9 +1,10 @@
 import type { MappedTypeConfig } from "../../core/mapped-types/MappedTypeConfig.js";
 import {
+  CenteredCubeGenerator,
+  CenteredTetrahedronGenerator,
   CenteredOctahedronGenerator,
   CenteredIcosahedronGenerator,
   CenteredDodecahedronGenerator,
-  CenteredCubeGenerator,
   CenteredMgonalPyramidalGenerator,
   CenteredMgonalPyramidGenerator,
   CenteredTruncatedCubeGenerator,
@@ -48,6 +49,7 @@ const baseStrategies = {
   rhombicDodecahedral: new RhombicDodecahedralGenerator(),
   hauyRhombicDodecahedral: new HauyRhombicDodecahedralGenerator(),
   centeredCube: new CenteredCubeGenerator(),
+  centeredTetrahedron: new CenteredTetrahedronGenerator(),
   centeredDodecahedron: new CenteredDodecahedronGenerator(),
   centeredIcosahedron: new CenteredIcosahedronGenerator(),
   centeredOctahedron: new CenteredOctahedronGenerator(),
