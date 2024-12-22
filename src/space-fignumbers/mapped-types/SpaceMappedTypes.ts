@@ -1,5 +1,4 @@
-import type { MappedTypeStrategy } from "../../core/mapped-types/MappedTypeStrategy.js";
-
+import type { MappedTypeConfig } from "../../core/mapped-types/MappedTypeConfig.js";
 import {
   CenteredDodecahedronGenerator,
   CenteredIcosahedronGenerator,
@@ -20,51 +19,9 @@ import {
   TruncatedCubicGenerator,
   TruncatedOctahedralGenerator,
   TruncatedTetrahedralGenerator,
-  type CenteredDodecahedronConfig,
-  type CenteredIcosahedronConfig,
-  type CenteredMgonalPyramidalConfig,
-  type CenteredMgonalPyramidConfig,
-  type CenteredOctahedronConfig,
-  type CenteredTruncatedCubeConfig,
-  type CenteredTruncatedOctahedronConfig,
-  type CubicConfig,
-  type DodecahedralConfig,
-  type IcosahedralConfig,
-  type MgonalPrismConfig,
-  type OctahedralConfig,
-  type PyramidalConfig,
-  type StellaOctangulaConfig,
-  type TetrahedralConfig,
-  type TruncatedCubicConfig,
-  type TruncatedOctahedralConfig,
-  type TruncatedTetrahedralConfig,
 } from "../strategies/index.js";
 
-export type SpaceConfigMap = {
-  pyramidal: PyramidalConfig;
-  mgonalPrism: MgonalPrismConfig;
-  centeredMgonalPyramidal: CenteredMgonalPyramidalConfig;
-  centeredMgonalPyramid: CenteredMgonalPyramidConfig;
-  centeredTruncatedCube: CenteredTruncatedCubeConfig;
-  centeredTruncatedTetrahedron: CenteredTruncatedOctahedronConfig;
-  centeredTruncatedOctahedron: CenteredTruncatedOctahedronConfig;
-  cubic: CubicConfig;
-  tetrahedral: TetrahedralConfig;
-  octahedral: OctahedralConfig;
-  dodecahedral: DodecahedralConfig;
-  icosahedral: IcosahedralConfig;
-  stellaOctangula: StellaOctangulaConfig;
-  truncatedCubic: TruncatedCubicConfig;
-  truncatedTetrahedral: TruncatedTetrahedralConfig;
-  truncatedOctahedral: TruncatedOctahedralConfig;
-  centeredDodecahedron: CenteredDodecahedronConfig;
-  centeredIcosahedron: CenteredIcosahedronConfig;
-  centeredOctahedron: CenteredOctahedronConfig;
-};
-
-export type SpaceMappedTypeStrategy = MappedTypeStrategy<SpaceConfigMap>;
-
-export const spaceMapStrategy: SpaceMappedTypeStrategy = {
+export const SPACE_MAP_STRATEGY = {
   pyramidal: new PyramidalGenerator(),
   mgonalPrism: new MgonalPrismGenerator(),
   centeredMgonalPyramidal: new CenteredMgonalPyramidalGenerator(),
@@ -84,4 +41,6 @@ export const spaceMapStrategy: SpaceMappedTypeStrategy = {
   centeredDodecahedron: new CenteredDodecahedronGenerator(),
   centeredIcosahedron: new CenteredIcosahedronGenerator(),
   centeredOctahedron: new CenteredOctahedronGenerator(),
-};
+} as const;
+
+export type SpaceConfigMap = MappedTypeConfig<typeof SPACE_MAP_STRATEGY>;
