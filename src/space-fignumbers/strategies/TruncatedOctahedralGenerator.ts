@@ -9,7 +9,7 @@ export class TruncatedOctahedralGenerator
   *generate({ step = 1n }: TruncatedOctahedralConfig): Generator<bigint> {
     let delta = 1n;
     while (true) {
-      yield (delta * (2n * delta ** 2n + 1n)) / 3n;
+      yield 16n * delta ** 3n - 33n * delta ** 2n + 24n * delta - 6n;
       delta += step;
     }
   }
