@@ -7,7 +7,7 @@ export class TruncatedCubicGenerator implements INumberGeneratorStrategy<Truncat
   *generate({ step = 1n }: TruncatedCubicConfig): Generator<bigint> {
     let delta = 1n;
     while (true) {
-      yield delta ** 3n;
+      yield (3n * delta - 2n) ** 3n - (8n * (delta - 1n) * delta * (delta + 1n)) / 6n;
       delta += step;
     }
   }
