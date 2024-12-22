@@ -5,7 +5,7 @@ export type ImpoliteConfig = StepConfig;
 
 export class ImpoliteGenerator implements INumberGeneratorStrategy<ImpoliteConfig> {
   *generate({ step = 1n }: ImpoliteConfig): Generator<bigint> {
-    let delta = 1n;
+    let delta = 0n;
     while (true) {
       yield 2n ** delta;
       delta += step;
