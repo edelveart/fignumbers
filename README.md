@@ -22,7 +22,7 @@ Fignumbers utilizes `BigInt` to manage large integers that exceed the `Number` t
 **Fignumbers** is structured around three main classes, each corresponding to a different spatial dimension, as described in the book:
 
 1. `PlaneFigNumbers` = 121
-2. `SpaceFigNumbers` = 19
+2. `SpaceFigNumbers` = 132
 3. `MultiDimensionalFigNumbers` = 20
 
 Each class offers specialized methods for generating different types of figurate numbers.
@@ -70,7 +70,7 @@ First 7 pyramidal numbers with m = 5n:
 
 ## List of implemented sequences
 
-### 1. Plane Figurate Numbers
+### 1. PlaneFigNumbers
 
 1. polygonal
 2. centeredPolygonal
@@ -193,6 +193,141 @@ First 7 pyramidal numbers with m = 5n:
 119. icosioctagram
 120. icosinonagram
 121. triacontagram
+
+### 2. SpaceFigNumbers
+
+1. pyramidal
+2. mgonalPrism
+3. centeredMgonalPyramidal
+4. centeredMgonalPyramid
+5. centeredTruncatedCube
+6. centeredTruncatedTetrahedron
+7. centeredTruncatedOctahedron
+8. cubic
+9. tetrahedral
+10. octahedral
+11. dodecahedral
+12. icosahedral
+13. stellaOctangula
+14. truncatedCubic
+15. truncatedTetrahedral
+16. truncatedOctahedral
+17. rhombicDodecahedral
+18. hauyRhombicDodecahedral
+19. centeredCube
+20. centeredDodecahedron
+21. centeredIcosahedron
+22. centeredOctahedron
+23. triangularPyramidal
+24. squarePyramidal
+25. pentagonalPyramidal
+26. hexagonalPyramidal
+27. heptagonalPyramidal
+28. octagonalPyramidal
+29. nonagonalPyramidal
+30. decagonalPyramidal
+31. hendecagonalPyramidal
+32. dodecagonalPyramidal
+33. tridecagonalPyramidal
+34. tetradecagonalPyramidal
+35. pentadecagonalPyramidal
+36. hexadecagonalPyramidal
+37. heptadecagonalPyramidal
+38. octadecagonalPyramidal
+39. nonadecagonalPyramidal
+40. icosagonalPyramidal
+41. icosihenagonalPyramidal
+42. icosidigonalPyramidal
+43. icositrigonalPyramidal
+44. icositetragonalPyramidal
+45. icosipentagonalPyramidal
+46. icosihexagonalPyramidal
+47. icosiheptagonalPyramidal
+48. icosioctagonalPyramidal
+49. icosinonagonalPyramidal
+50. triacontagonalPyramidal
+51. centeredPentagonalPyramid
+52. centeredHexagonalPyramid
+53. centeredHeptagonalPyramid
+54. centeredOctagonalPyramid
+55. centeredNonagonalPyramid
+56. centeredDecagonalPyramid
+57. centeredHendecagonalPyramid
+58. centeredDodecagonalPyramid
+59. centeredTridecagonalPyramid
+60. centeredTetradecagonalPyramid
+61. centeredPentadecagonalPyramid
+62. centeredHexadecagonalPyramid
+63. centeredHeptadecagonalPyramid
+64. centeredOctadecagonalPyramid
+65. centeredNonadecagonalPyramid
+66. centeredIcosagonalPyramid
+67. centeredIcosihenagonalPyramid
+68. centeredIcosidigonalPyramid
+69. centeredIcositrigonalPyramid
+70. centeredIcositetragonalPyramid
+71. centeredIcosipentagonalPyramid
+72. centeredIcosihexagonalPyramid
+73. centeredIcosiheptagonalPyramid
+74. centeredIcosioctagonalPyramid
+75. centeredIcosinonagonalPyramid
+76. centeredTriacontagonalPyramid
+77. centeredTriangularPyramidal
+78. centeredSquarePyramidal
+79. centeredPentagonalPyramidal
+80. centeredHexagonalPyramidal
+81. centeredHeptagonalPyramidal
+82. centeredOctagonalPyramidal
+83. centeredNonagonalPyramidal
+84. centeredDecagonalPyramidal
+85. centeredHendecagonalPyramidal
+86. centeredDodecagonalPyramidal
+87. centeredTridecagonalPyramidal
+88. centeredTetradecagonalPyramidal
+89. centeredPentadecagonalPyramidal
+90. centeredHexadecagonalPyramidal
+91. centeredHeptadecagonalPyramidal
+92. centeredOctadecagonalPyramidal
+93. centeredNonadecagonalPyramidal
+94. centeredIcosagonalPyramidal
+95. centeredIcosihenagonalPyramidal
+96. centeredIcosidigonalPyramidal
+97. centeredIcositrigonalPyramidal
+98. centeredIcositetragonalPyramidal
+99. centeredIcosipentagonalPyramidal
+100. centeredIcosihexagonalPyramidal
+101. centeredIcosiheptagonalPyramidal
+102. centeredIcosioctagonalPyramidal
+103. centeredIcosinonagonalPyramidal
+104. centeredTriacontagonalPyramidal
+105. triangularPrism
+106. squarePrism
+107. pentagonalPrism
+108. hexagonalPrism
+109. heptagonalPrism
+110. octagonalPrism
+111. nonagonalPrism
+112. decagonalPrism
+113. hendecagonalPrism
+114. dodecagonalPrism
+115. tridecagonalPrism
+116. tetradecagonalPrism
+117. pentadecagonalPrism
+118. hexadecagonalPrism
+119. heptadecagonalPrism
+120. octadecagonalPrism
+121. nonadecagonalPrism
+122. icosagonalPrism
+123. icosihenagonalPrism
+124. icosidigonalPrism
+125. icositrigonalPrism
+126. icositetragonalPrism
+127. icosipentagonalPrism
+128. icosihexagonalPrism
+129. icosiheptagonalPrism
+130. icosioctagonalPrism
+131. icosinonagonalPrism
+132. triacontagonalPrism
 
 ## Contributing
 
