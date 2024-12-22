@@ -68,7 +68,7 @@ First 7 pyramidal numbers with m = 5n:
   Number 7: 196n
 ```
 
-## List of implemented sequences
+## Overview of implemented sequences per class
 
 ### 1. PlaneFigNumbers
 
