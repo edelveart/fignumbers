@@ -330,7 +330,7 @@ First 7 pyramidal numbers with m = 5n:
 132. icosinonagonalPrism
 133. triacontagonalPrism
 
-### MultiDimensionalFigNumbers
+### 3. MultiDimensionalFigNumbers
 
 1. hyperTetrahedral
 2. hyperCubic
