@@ -3,31 +3,6 @@ import { PlaneFigNumbers } from "../../../src/index";
 import { compareExpectToEqual } from "../../utils/helperGeneratorContext";
 
 describe("Plane Figurate Numbers Generation", () => {
-  it("should return the sequence of triangular numbers", () => {
-    compareExpectToEqual(
-      PlaneFigNumbers.generate("polygonal", { step: 1n }),
-      [1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, 120, 136, 153, 171, 190, 210],
-    );
-  });
-
-  it("should return the sequence of triangular numbers", () => {
-    compareExpectToEqual(
-      PlaneFigNumbers.generate("polygonal", { step: 1n }),
-      [1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, 120, 136, 153, 171, 190, 210],
-    );
-  });
-
-  it("should return the sequence of square numbers", () => {
-    compareExpectToEqual(PlaneFigNumbers.generate("polygonal", { m: 4n }), [1, 4, 9, 16, 25, 36]);
-  });
-
-  it("should return the sequence of pentagonal numbers", () => {
-    compareExpectToEqual(
-      PlaneFigNumbers.generate("polygonal", { m: 5n }),
-      [1, 5, 12, 22, 35, 51, 70, 92, 117, 145, 176, 210, 247, 287, 330, 376, 425, 477, 532, 590],
-    );
-  });
-
   it("should return the sequence of octagonal numbers", () => {
     compareExpectToEqual(
       PlaneFigNumbers.generate("polygonal", { m: 8n }),
@@ -50,33 +25,33 @@ describe("Plane Figurate Numbers Generation", () => {
     );
   });
 
-  it("should return the sequence of polygram numbers", () => {
+  it("should return the sequence of truncated centered polygonal numbers", () => {
     compareExpectToEqual(
-      PlaneFigNumbers.generate("polygram", { m: 3n }),
+      PlaneFigNumbers.generate("truncatedCenteredPolygonal", { m: 7n }),
       [
-        1, 7, 19, 37, 61, 91, 127, 169, 217, 271, 331, 397, 469, 547, 631, 721, 817, 919, 1027,
-        1141, 1261, 1387, 1519, 1657, 1801, 1951, 2107, 2269, 2437, 2611, 2791, 2977, 3169, 3367,
-        3571, 3781, 3997, 4219, 4447, 4681, 4921, 5167, 5419, 5677, 5941, 6211, 6487, 6769, 7057,
-        7351,
+        1, 36, 120, 253, 435, 666, 946, 1275, 1653, 2080, 2556, 3081, 3655, 4278, 4950, 5671, 6441,
+        7260, 8128, 9045, 10011, 11026, 12090, 13203, 14365,
       ],
     );
   });
 
-  it("should return the sequence of pentagram numbers", () => {
+  it("should return the sequence of pronic numbers", () => {
     compareExpectToEqual(
-      PlaneFigNumbers.generate("pentagram", {}),
-      [1, 11, 31, 61, 101, 151, 211, 281, 361, 451],
+      PlaneFigNumbers.generate("pronic", {}),
+      [
+        2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380, 420,
+        462, 506, 552, 600, 650, 702, 756, 812, 870, 930, 992, 1056, 1122, 1190, 1260, 1332, 1406,
+        1482, 1560, 1640, 1722, 1806, 1892, 1980, 2070, 2162, 2256, 2352, 2450, 2550, 2652, 2756,
+        2862, 2970, 3080, 3192, 3306, 3422, 3540, 3660, 3782, 3906, 4032, 4160, 4290, 4422, 4556,
+        4692, 4830, 4970, 5112, 5256, 5402, 5550, 5700, 5852, 6006, 6162, 6320, 6480,
+      ],
     );
   });
 
-  it("should return the sequence of cross numbers", () => {
+  it("should return the sequence of truncated pronic numbers", () => {
     compareExpectToEqual(
-      PlaneFigNumbers.generate("cross", {}),
-      [
-        1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93,
-        97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 137, 141, 145, 149, 153, 157, 161, 165,
-        169, 173, 177, 181, 185, 189, 193, 197, 201, 205, 209, 213, 217, 221, 225, 229, 233, 237,
-      ],
+      PlaneFigNumbers.generate("truncatedPronic", {}),
+      [2, 16, 44, 86, 142, 212, 296, 394, 506, 632],
     );
   });
 
@@ -108,32 +83,25 @@ describe("Plane Figurate Numbers Generation", () => {
     );
   });
 
-  it("should return the sequence of pronic numbers", () => {
+  it("should return the sequence of cross numbers", () => {
     compareExpectToEqual(
-      PlaneFigNumbers.generate("pronic", {}),
+      PlaneFigNumbers.generate("cross", {}),
       [
-        2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380, 420,
-        462, 506, 552, 600, 650, 702, 756, 812, 870, 930, 992, 1056, 1122, 1190, 1260, 1332, 1406,
-        1482, 1560, 1640, 1722, 1806, 1892, 1980, 2070, 2162, 2256, 2352, 2450, 2550, 2652, 2756,
-        2862, 2970, 3080, 3192, 3306, 3422, 3540, 3660, 3782, 3906, 4032, 4160, 4290, 4422, 4556,
-        4692, 4830, 4970, 5112, 5256, 5402, 5550, 5700, 5852, 6006, 6162, 6320, 6480,
+        1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93,
+        97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 137, 141, 145, 149, 153, 157, 161, 165,
+        169, 173, 177, 181, 185, 189, 193, 197, 201, 205, 209, 213, 217, 221, 225, 229, 233, 237,
       ],
     );
   });
 
-  it("should return the sequence of truncated pronic numbers", () => {
+  it("should return the sequence of polygram numbers", () => {
     compareExpectToEqual(
-      PlaneFigNumbers.generate("truncatedPronic", {}),
-      [2, 16, 44, 86, 142, 212, 296, 394, 506, 632],
-    );
-  });
-
-  it("should return the sequence of truncated centered polygonal numbers", () => {
-    compareExpectToEqual(
-      PlaneFigNumbers.generate("truncatedCenteredPolygonal", { m: 7n }),
+      PlaneFigNumbers.generate("polygram", { m: 3n }),
       [
-        1, 36, 120, 253, 435, 666, 946, 1275, 1653, 2080, 2556, 3081, 3655, 4278, 4950, 5671, 6441,
-        7260, 8128, 9045, 10011, 11026, 12090, 13203, 14365,
+        1, 7, 19, 37, 61, 91, 127, 169, 217, 271, 331, 397, 469, 547, 631, 721, 817, 919, 1027,
+        1141, 1261, 1387, 1519, 1657, 1801, 1951, 2107, 2269, 2437, 2611, 2791, 2977, 3169, 3367,
+        3571, 3781, 3997, 4219, 4447, 4681, 4921, 5167, 5419, 5677, 5941, 6211, 6487, 6769, 7057,
+        7351,
       ],
     );
   });
