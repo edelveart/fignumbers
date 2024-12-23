@@ -1,11 +1,11 @@
-export * from "./PentatopeGenerator.js";
+export * from "./HyperTetrahedralGenerator.js";
 
 export * from "./KDimensionalHyperTetrahedronGenerator.js";
 export * from "./KDimensionalHyperCubeGenerator.js";
 export * from "./KDimensionalHyperOctahedronGenerator.js";
 
-export * from "./BiquadraticGenerator.js";
-export * from "./CenteredBiquadraticGenerator.js";
+export * from "./HyperCubicGenerator.js";
+export * from "./CenteredHyperCubeGenerator.js";
 
 export * from "./HyperOctahedralGenerator.js";
 export * from "./HyperIcosahedralGenerator.js";
@@ -22,7 +22,7 @@ export * from "./KDimensionalCenteredHyperOctahedronGenerator.js";
 
 export * from "./KDimensionalMgonalPyramidalGenerator.js";
 
-export * from "./CenteredPolytopeGenerator.js";
+export * from "./CenteredHyperTetrahedronGenerator.js";
 export * from "./CenteredHyperOctahedralGenerator.js";
 
 export * from "./NexusGenerator.js";

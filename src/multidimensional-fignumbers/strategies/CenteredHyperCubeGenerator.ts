@@ -1,12 +1,12 @@
 import type { StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
-export type CenteredBiquadraticConfig = StepConfig;
+export type CenteredHyperCubeConfig = StepConfig;
 
-export class CenteredBiquadraticGenerator
-  implements INumberGeneratorStrategy<CenteredBiquadraticConfig>
+export class CenteredHyperCubeGenerator
+  implements INumberGeneratorStrategy<CenteredHyperCubeConfig>
 {
-  *generate({ step = 1n }: CenteredBiquadraticConfig): Generator<bigint> {
+  *generate({ step = 1n }: CenteredHyperCubeConfig): Generator<bigint> {
     let delta = 1n;
     let acc = 0n;
     while (true) {
