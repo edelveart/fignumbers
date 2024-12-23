@@ -16,23 +16,10 @@ describe("Space Figurate Numbers Generation", () => {
     );
   });
 
-  it("should return the sequence of centered polygonal pyramidal numbers", () => {
+  it("should return the sequence of tetrahedral numbers", () => {
     compareExpectToEqual(
-      SpaceFigNumbers.generate("centeredMgonalPyramidal", { m: 11n }),
-      [
-        1, 13, 47, 114, 225, 391, 623, 932, 1329, 1825, 2431, 3158, 4017, 5019, 6175, 7496, 8993,
-        10677, 12559, 14650, 16961, 19503, 22287, 25324, 28625, 32201, 36063, 40222, 44689, 49475,
-        54591, 60048, 65857, 72029, 78575, 85506, 92833, 100567, 108719, 117300, 126321, 135793,
-        145727, 156134, 167025, 178411, 190303, 202712, 215649, 229125, 243151, 257738, 272897,
-        288639, 304975, 321916, 339473, 357657, 376479, 395950,
-      ],
-    );
-  });
-
-  it("should return the sequence of centered polygonal pyramid numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("centeredMgonalPyramid", { m: 9n }),
-      [1, 11, 45, 119, 249, 451, 741, 1135, 1649, 2299],
+      SpaceFigNumbers.generate("tetrahedral", {}),
+      [1, 4, 10, 20, 35, 56, 84, 120, 165, 220],
     );
   });
 
@@ -40,13 +27,6 @@ describe("Space Figurate Numbers Generation", () => {
     compareExpectToEqual(
       SpaceFigNumbers.generate("cubic", {}),
       [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000],
-    );
-  });
-
-  it("should return the sequence of tetrahedral numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("tetrahedral", {}),
-      [1, 4, 10, 20, 35, 56, 84, 120, 165, 220],
     );
   });
 
@@ -79,6 +59,64 @@ describe("Space Figurate Numbers Generation", () => {
     );
   });
 
+  it("should return the sequence of centered polygonal pyramidal numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("centeredMgonalPyramidal", { m: 11n }),
+      [
+        1, 13, 47, 114, 225, 391, 623, 932, 1329, 1825, 2431, 3158, 4017, 5019, 6175, 7496, 8993,
+        10677, 12559, 14650, 16961, 19503, 22287, 25324, 28625, 32201, 36063, 40222, 44689, 49475,
+        54591, 60048, 65857, 72029, 78575, 85506, 92833, 100567, 108719, 117300, 126321, 135793,
+        145727, 156134, 167025, 178411, 190303, 202712, 215649, 229125, 243151, 257738, 272897,
+        288639, 304975, 321916, 339473, 357657, 376479, 395950,
+      ],
+    );
+  });
+
+  it("should return the sequence of centered polygonal pyramid numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("centeredMgonalPyramid", { m: 9n }),
+      [1, 11, 45, 119, 249, 451, 741, 1135, 1649, 2299],
+    );
+  });
+
+  it("should return the sequence of centered tetrahedron numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("centeredTetrahedron", {}),
+      [1, 5, 15, 35, 69, 121, 195, 295, 425, 589],
+    );
+  });
+
+  it("should return the sequence of centered cube numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("centeredCube", {}),
+      [1, 9, 35, 91, 189, 341, 559, 855, 1241, 1729],
+    );
+  });
+
+  it("should return the sequence of centered octahedron  numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("centeredOctahedron", {}),
+      [
+        1, 7, 25, 63, 129, 231, 377, 575, 833, 1159, 1561, 2047, 2625, 3303, 4089, 4991, 6017, 7175,
+        8473, 9919,
+      ],
+    );
+  });
+
+  it("should return the sequence of centered dodecahedron  numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("centeredDodecahedron", {}),
+      [1, 21, 95, 259, 549, 1001, 1651, 2535, 3689, 5149],
+    );
+  });
+
+  it("should return the sequence of centered icosahedron  numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("centeredIcosahedron", {}),
+      [1, 13, 55, 147, 309, 561, 923, 1415, 2057, 2869],
+    );
+  });
+
   it("should return the sequence of truncated tetrahedral numbers", () => {
     compareExpectToEqual(
       SpaceFigNumbers.generate("truncatedTetrahedral", {}),
@@ -104,80 +142,6 @@ describe("Space Figurate Numbers Generation", () => {
     compareExpectToEqual(
       SpaceFigNumbers.generate("truncatedOctahedral", {}),
       [1, 38, 201, 586, 1289, 2406, 4033, 6266, 9201, 12934],
-    );
-  });
-
-  it("should return the sequence of stella octangula numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("stellaOctangula", {}),
-      [1, 14, 51, 124, 245, 426, 679, 1016, 1449, 1990],
-    );
-  });
-
-  it("should return the sequence of polygonal prism numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("mgonalPrism", { m: 14n }),
-      [
-        1, 30, 129, 340, 705, 1266, 2065, 3144, 4545, 6310, 8481, 11100, 14209, 17850, 22065, 26896,
-        32385, 38574, 45505, 53220,
-      ],
-    );
-  });
-
-  it("should return the sequence of rhombic dodecahedral numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("rhombicDodecahedral", {}),
-      [
-        1, 15, 65, 175, 369, 671, 1105, 1695, 2465, 3439, 4641, 6095, 7825, 9855, 12209, 14911,
-        17985, 21455, 25345, 29679, 34481, 39775, 45585, 51935, 58849, 66351, 74465, 83215, 92625,
-        102719, 113521, 125055, 137345, 150415, 164289, 178991, 194545, 210975, 228305, 246559,
-        265761, 285935, 307105, 329295, 352529,
-      ],
-    );
-  });
-
-  it("should return the sequence of Haűy rhombic dodecahedral numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("hauyRhombicDodecahedral", {}),
-      [1, 33, 185, 553, 1233, 2321, 3913, 6105, 8993, 12673],
-    );
-  });
-
-  it("should return the sequence of centered cube numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("centeredCube", {}),
-      [1, 9, 35, 91, 189, 341, 559, 855, 1241, 1729],
-    );
-  });
-
-  it("should return the sequence of tetrahedron cube numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("centeredTetrahedron", {}),
-      [1, 5, 15, 35, 69, 121, 195, 295, 425, 589],
-    );
-  });
-
-  it("should return the sequence of centered octahedron  numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("centeredOctahedron", {}),
-      [
-        1, 7, 25, 63, 129, 231, 377, 575, 833, 1159, 1561, 2047, 2625, 3303, 4089, 4991, 6017, 7175,
-        8473, 9919,
-      ],
-    );
-  });
-
-  it("should return the sequence of centered icosahedron  numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("centeredIcosahedron", {}),
-      [1, 13, 55, 147, 309, 561, 923, 1415, 2057, 2869],
-    );
-  });
-
-  it("should return the sequence of centered dodecahedron  numbers", () => {
-    compareExpectToEqual(
-      SpaceFigNumbers.generate("centeredDodecahedron", {}),
-      [1, 21, 95, 259, 549, 1001, 1651, 2535, 3689, 5149],
     );
   });
 
@@ -207,6 +171,42 @@ describe("Space Figurate Numbers Generation", () => {
       [
         1, 33, 155, 427, 909, 1661, 2743, 4215, 6137, 8569, 11571, 15203, 19525, 24597, 30479,
         37231, 44913, 53585, 63307, 74139,
+      ],
+    );
+  });
+
+  it("should return the sequence of stella octangula numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("stellaOctangula", {}),
+      [1, 14, 51, 124, 245, 426, 679, 1016, 1449, 1990],
+    );
+  });
+
+  it("should return the sequence of rhombic dodecahedral numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("rhombicDodecahedral", {}),
+      [
+        1, 15, 65, 175, 369, 671, 1105, 1695, 2465, 3439, 4641, 6095, 7825, 9855, 12209, 14911,
+        17985, 21455, 25345, 29679, 34481, 39775, 45585, 51935, 58849, 66351, 74465, 83215, 92625,
+        102719, 113521, 125055, 137345, 150415, 164289, 178991, 194545, 210975, 228305, 246559,
+        265761, 285935, 307105, 329295, 352529,
+      ],
+    );
+  });
+
+  it("should return the sequence of Haűy rhombic dodecahedral numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("hauyRhombicDodecahedral", {}),
+      [1, 33, 185, 553, 1233, 2321, 3913, 6105, 8993, 12673],
+    );
+  });
+
+  it("should return the sequence of polygonal prism numbers", () => {
+    compareExpectToEqual(
+      SpaceFigNumbers.generate("mgonalPrism", { m: 14n }),
+      [
+        1, 30, 129, 340, 705, 1266, 2065, 3144, 4545, 6310, 8481, 11100, 14209, 17850, 22065, 26896,
+        32385, 38574, 45505, 53220,
       ],
     );
   });
