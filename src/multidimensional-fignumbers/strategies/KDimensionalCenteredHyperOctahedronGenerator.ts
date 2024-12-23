@@ -1,4 +1,4 @@
-import type { KConfigStepConfig } from "../../core/types/ConfigTypes.js";
+import type { KConfigStepConfig, StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 import { binomialCoeff } from "../utils/helpersMultidimensionalFigNumbers.js";
 
@@ -25,5 +25,20 @@ export class KDimensionalCenteredHyperOctahedronGenerator
       yield exteriorInteriorDoubleSummation(k, delta);
       delta += step;
     }
+  }
+}
+
+export class KDimensionalCenteredHyperOctahedronSpecificGenerator
+  implements INumberGeneratorStrategy<StepConfig>
+{
+  private k: bigint;
+  private baseGenerator = new KDimensionalCenteredHyperOctahedronGenerator();
+
+  constructor(k: bigint) {
+    this.k = k;
+  }
+
+  *generate({ step = 1n }): Generator<bigint> {
+    return yield* this.baseGenerator.generate({ step, k: this.k });
   }
 }

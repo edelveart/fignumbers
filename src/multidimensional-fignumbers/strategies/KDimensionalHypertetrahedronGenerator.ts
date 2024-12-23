@@ -1,4 +1,4 @@
-import type { KConfigStepConfig } from "../../core/types/ConfigTypes.js";
+import type { KConfigStepConfig, StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 import { factorialIter, risingFactorial } from "../utils/helpersMultidimensionalFigNumbers.js";
 
@@ -13,5 +13,20 @@ export class KDimensionalHyperTetrahedronGenerator
       yield risingFactorial(delta, k) / factorialIter(k);
       delta += step;
     }
+  }
+}
+
+export class KDimensionalHyperTetrahedronSpecificGenerator
+  implements INumberGeneratorStrategy<StepConfig>
+{
+  private k: bigint;
+  private baseGenerator = new KDimensionalHyperTetrahedronGenerator();
+
+  constructor(k: bigint) {
+    this.k = k;
+  }
+
+  *generate({ step = 1n }): Generator<bigint> {
+    return yield* this.baseGenerator.generate({ step, k: this.k });
   }
 }

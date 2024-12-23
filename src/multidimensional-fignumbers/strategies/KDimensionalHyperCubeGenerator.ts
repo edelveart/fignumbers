@@ -1,4 +1,4 @@
-import type { KConfigStartConfigStepConfig } from "../../core/types/ConfigTypes.js";
+import type { KConfigStartConfigStepConfig, StepConfig } from "../../core/types/ConfigTypes.js";
 import type { INumberGeneratorStrategy } from "../../core/interfaces/INumberGeneratorStrategy.js";
 
 export type KDimensionalHyperCubeConfig = KConfigStartConfigStepConfig;
@@ -12,5 +12,20 @@ export class KDimensionalHyperCubeGenerator
       yield delta ** k;
       delta += step;
     }
+  }
+}
+
+export class KDimensionalHyperCubeSpecificGenerator
+  implements INumberGeneratorStrategy<StepConfig>
+{
+  private k: bigint;
+  private baseGenerator = new KDimensionalHyperCubeGenerator();
+
+  constructor(k: bigint) {
+    this.k = k;
+  }
+
+  *generate({ step = 1n }): Generator<bigint> {
+    return yield* this.baseGenerator.generate({ step, k: this.k });
   }
 }
