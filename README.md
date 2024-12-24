@@ -1,31 +1,24 @@
-# Fignumbers
+<h1 align="center"> Fignumbers </h1>
 
-![NPM Version](https://img.shields.io/npm/v/fignumbers)
-![NPM Type Definitions](https://img.shields.io/npm/types/fignumbers)
-![NPM License](https://img.shields.io/npm/l/fignumbers)
+**Fignumbers** is a comprehensive TypeScript library designed to generate and explore _figurate numbers_, which can be represented as geometric shapes in 2D, 3D, and higher-dimensional spaces.
 
-**Fignumbers** is a comprehensive TypeScript library designed to generate and explore _figurate numbers_, numbers that can be visualized as geometric shapes in 2D, 3D, and higher-dimensional spaces.
+<p align="center">
+  <img src="https://img.shields.io/npm/v/fignumbers" alt="NPM Version">
+  <img src="https://img.shields.io/npm/types/fignumbers" alt="NPM Type Definitions">
+  <img src="https://img.shields.io/npm/l/fignumbers" alt="NPM License">
+</p>
 
-Based on the book Figurate Numbers (2012) by Elena and Michel Deza, this library supports a wide range of infinite sequences.
+![fignumber-social-image](fignumber-banner.png)
 
-## Why fignumbers? 🚀
+## Rich variety with academic foundation 🚀
+Based on the book *Figurate Numbers* (2012) by Elena Deza and Michel Deza, this library covers a broad range of figurate number sequences. This academic foundation ensures its reliability and precision for use in various fields:
 
-1. Rich variety: Covers a broad range of figurate number sequences, for use in mathematical projects, visualization, algorithmic applications, or any work involving figurate number sequences.
-2. Efficient and precise: Optimized for TypeScript, taking full advantage of its features to enhance performance and type safety.
+- **Mathematical projects**
+- **Visualization**
+- **Algorithmic applications**
+- **Any work involving figurate number sequences**
 
-### BigInt Support Required ⚠️
-
-Fignumbers utilizes `BigInt` to manage large integers that exceed the `Number` type limit of `(2^53 - 1)`. Ensure that your environment supports **BigInt** before using this library.
-
-## Three main classes ⚙️
-
-**Fignumbers** is structured around three main classes, each corresponding to a different spatial dimension, as described in the book:
-
-1. `PlaneFigNumbers` = 121
-2. `SpaceFigNumbers` = 133
-3. `MultiDimensionalFigNumbers` = 191
-
-Each class offers specialized methods for generating different types of figurate numbers.
+It is also efficient and precise, optimized for TypeScript to maximize performance and ensure type safety.
 
 ## Installation 🛠️
 
@@ -35,7 +28,23 @@ First, make sure you have the library installed via npm:
 npm install fignumbers
 ```
 
+### BigInt Support Required ⚠️
+
+- **Fignumbers** utilizes `BigInt` to manage large integers that exceed the `Number` type limit of `(2^53 - 1)`. Ensure that your environment supports **BigInt** before using this library.
+
 ## Usage 🔥
+
+### Three main classes ⚙️
+
+**Fignumbers** is structured around three main classes, each corresponding to a different spatial dimension, as described in the book:
+
+1. **PlaneFigNumbers** – 121 sequences
+2. **SpaceFigNumbers** – 133 sequences
+3. **MultiDimensionalFigNumbers** – 191 sequences
+
+Together, these classes implement a total of 445 figurate number sequences.
+
+### Example
 
 ```ts
 // 1. Import the library
@@ -55,7 +64,7 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-## Expected Output 🌟
+### Expected Output
 
 ```txt
 First 7 pyramidal numbers with m = 5n:
@@ -68,7 +77,7 @@ First 7 pyramidal numbers with m = 5n:
   Number 7: 196n
 ```
 
-## Overview of implemented sequences per class
+## Overview of implemented sequences per class 🌟
 
 ### 1. PlaneFigNumbers
 
