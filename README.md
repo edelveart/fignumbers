@@ -1,6 +1,6 @@
 <h1 align="center"> Fignumbers </h1>
 
-**Fignumbers** is a comprehensive TypeScript library designed to generate and explore _figurate numbers_, which can be represented as geometric shapes in 2D, 3D, and higher-dimensional spaces.
+**Fignumbers** is a comprehensive TypeScript library for generating and exploring infinite figurate number sequences, linked to geometric shapes across multiple dimensions.
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/fignumbers" alt="NPM Version">
@@ -11,7 +11,8 @@
 ![fignumber-social-image](fignumber-banner.png)
 
 ## Rich variety with academic foundation 🚀
-Based on the book *Figurate Numbers* (2012) by Elena Deza and Michel Deza, this library covers a broad range of figurate number sequences. This academic foundation ensures its reliability and precision for use in various fields:
+
+Based on the book _Figurate Numbers_ (2012) by Elena Deza and Michel Deza, this library covers a broad range of figurate number sequences. This academic foundation ensures its reliability and precision for use in various fields:
 
 - **Mathematical projects**
 - **Visualization**
