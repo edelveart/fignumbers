@@ -57,7 +57,7 @@ export class Validator {
       this.validateMFacets(config.m);
     }
     if (CONFIG_CONSTANTS.k in config) {
-      this.validateMFacets(config.k);
+      this.validateKDimension(config.k);
     }
   }
 }
