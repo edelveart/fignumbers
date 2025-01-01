@@ -1,3 +1,5 @@
+import type { MultiDimensionalConfigMap } from "../../multidimensional-fignumbers/mapped-types/MultiDimensionalMappedTypes.js";
+import { CONFIG_CONSTANTS } from "../types/configConstants.js";
 import { ERROR_MESSAGE } from "./errorMessages.js";
 
 export class Validator {
@@ -39,6 +41,23 @@ export class Validator {
       if (k < 4n) {
         throw new Error(ERROR_MESSAGE.kDimensionErrorMessage);
       }
+    }
+  }
+
+  static validateConfig<Key extends keyof MultiDimensionalConfigMap>(
+    config: MultiDimensionalConfigMap[Key],
+  ): void {
+    if (CONFIG_CONSTANTS.step in config) {
+      this.validateStep(config.step);
+    }
+    if (CONFIG_CONSTANTS.start in config) {
+      this.validateStart(config.start);
+    }
+    if (CONFIG_CONSTANTS.m in config) {
+      this.validateMFacets(config.m);
+    }
+    if (CONFIG_CONSTANTS.k in config) {
+      this.validateMFacets(config.k);
     }
   }
 }
