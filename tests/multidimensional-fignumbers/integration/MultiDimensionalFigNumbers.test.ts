@@ -4,8 +4,9 @@ import { compareExpectToEqual } from "../../utils/helperGeneratorContext";
 
 describe("MultiDimensional Figurate Numbers Generation", () => {
   it("should return the sequence of hypertetrahedral numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("hyperTetrahedral");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("hyperTetrahedral", {}),
+      seq.generate({}),
       [
         1, 5, 15, 35, 70, 126, 210, 330, 495, 715, 1001, 1365, 1820, 2380, 3060, 3876, 4845, 5985,
         7315, 8855, 10626, 12650, 14950, 17550, 20475,
@@ -14,15 +15,14 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of hypercubic numbers", () => {
-    compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("hyperCubic", {}),
-      [1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000],
-    );
+    const seq = new MultiDimensionalFigNumbers("hyperCubic");
+    compareExpectToEqual(seq.generate({}), [1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000]);
   });
 
   it("should return the sequence of hyperoctahedral numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("hyperOctahedral");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("hyperOctahedral", {}),
+      seq.generate({}),
       [
         1, 8, 33, 96, 225, 456, 833, 1408, 2241, 3400, 4961, 7008, 9633, 12936, 17025, 22016, 28033,
         35208, 43681, 53600, 65121, 78408, 93633, 110976, 130625, 152776, 177633, 205408, 236321,
@@ -32,8 +32,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of hyperdodecahedral numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("hyperDodecahedral");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("hyperDodecahedral", {}),
+      seq.generate({}),
       [
         1, 600, 4983, 19468, 53505, 119676, 233695, 414408, 683793, 1066960, 1592151, 2290740,
         3197233, 4349268, 5787615, 7556176, 9701985, 12275208, 15329143, 18920220, 23108001,
@@ -43,8 +44,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of hypericosahedral numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("hyperIcosahedral");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("hyperIcosahedral", {}),
+      seq.generate({}),
       [
         1, 120, 947, 3652, 9985, 22276, 43435, 76952, 126897, 197920, 295251, 424700, 592657,
         806092, 1072555, 1400176, 1797665, 2274312, 2839987, 3505140, 4280801, 5178580, 6210667,
@@ -54,8 +56,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of polyoctahedral numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("polyOctahedral");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("polyOctahedral", {}),
+      seq.generate({}),
       [
         1, 24, 153, 544, 1425, 3096, 5929, 10368, 16929, 26200, 38841, 55584, 77233, 104664, 138825,
         180736, 231489, 292248, 364249, 448800, 547281, 661144, 791913, 941184, 1110625, 1301976,
@@ -67,8 +70,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of k dimensional hypertetrahedron numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("kDimensionalHyperTetrahedron");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalHyperTetrahedron", { k: 14n }),
+      seq.generate({ k: 14n }),
       [
         1, 15, 120, 680, 3060, 11628, 38760, 116280, 319770, 817190, 1961256, 4457400, 9657700,
         20058300, 40116600, 77558760, 145422675, 265182525, 471435600, 818809200, 1391975640,
@@ -81,61 +85,60 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of k dimensional hypercube numbers", () => {
-    compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalHyperCube", { k: 19n, start: -23n }),
-      [
-        -74615470927590710561908487n,
-        -32064977213018365645815808n,
-        -13248496640331026125580781n,
-        -5242880000000000000000000n,
-        -1978419655660313589123979n,
-        -708235345355337676357632n,
-        -239072435685151324847153n,
-        -75557863725914323419136n,
-        -22168378200531005859375n,
-        -5976303958948914397184n,
-        -1461920290375446110677n,
-        -319479999370622926848n,
-        -61159090448414546291n,
-        -10000000000000000000n,
-        -1350851717672992089n,
-        -144115188075855872n,
-        -11398895185373143n,
-        -609359740010496n,
-        -19073486328125n,
-        -274877906944n,
-        -1162261467n,
-        -524288n,
-        -1n,
-        0n,
-        1n,
-        524288n,
-        1162261467n,
-        274877906944n,
-        19073486328125n,
-        609359740010496n,
-        11398895185373143n,
-        144115188075855872n,
-        1350851717672992089n,
-        10000000000000000000n,
-        61159090448414546291n,
-        319479999370622926848n,
-        1461920290375446110677n,
-        5976303958948914397184n,
-        22168378200531005859375n,
-        75557863725914323419136n,
-        239072435685151324847153n,
-        708235345355337676357632n,
-        1978419655660313589123979n,
-        5242880000000000000000000n,
-        13248496640331026125580781n,
-      ],
-    );
+    const seq = new MultiDimensionalFigNumbers("kDimensionalHyperCube");
+    compareExpectToEqual(seq.generate({ k: 19n, start: -23n }), [
+      -74615470927590710561908487n,
+      -32064977213018365645815808n,
+      -13248496640331026125580781n,
+      -5242880000000000000000000n,
+      -1978419655660313589123979n,
+      -708235345355337676357632n,
+      -239072435685151324847153n,
+      -75557863725914323419136n,
+      -22168378200531005859375n,
+      -5976303958948914397184n,
+      -1461920290375446110677n,
+      -319479999370622926848n,
+      -61159090448414546291n,
+      -10000000000000000000n,
+      -1350851717672992089n,
+      -144115188075855872n,
+      -11398895185373143n,
+      -609359740010496n,
+      -19073486328125n,
+      -274877906944n,
+      -1162261467n,
+      -524288n,
+      -1n,
+      0n,
+      1n,
+      524288n,
+      1162261467n,
+      274877906944n,
+      19073486328125n,
+      609359740010496n,
+      11398895185373143n,
+      144115188075855872n,
+      1350851717672992089n,
+      10000000000000000000n,
+      61159090448414546291n,
+      319479999370622926848n,
+      1461920290375446110677n,
+      5976303958948914397184n,
+      22168378200531005859375n,
+      75557863725914323419136n,
+      239072435685151324847153n,
+      708235345355337676357632n,
+      1978419655660313589123979n,
+      5242880000000000000000000n,
+      13248496640331026125580781n,
+    ]);
   });
 
   it("should return the sequence of k dimensional hyperoctahedron numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("kDimensionalHyperOctahedron");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalHyperOctahedron", { k: 13n }),
+      seq.generate({ k: 13n }),
       [
         1, 26, 339, 2964, 19605, 104910, 474215, 1866280, 6539625, 20758530, 60511803, 163786428,
         415382397, 994551222, 2262406095, 4916055120, 10250995665, 20594048490, 39997954595,
@@ -150,8 +153,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of centered hypertetrahedron numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("centeredHyperTetrahedron");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("centeredHyperTetrahedron", {}),
+      seq.generate({}),
       [
         1, 6, 21, 56, 126, 251, 456, 771, 1231, 1876, 2751, 3906, 5396, 7281, 9626, 12501, 15981,
         20146, 25081, 30876, 37626, 45431, 54396, 64631, 76251, 89376, 104131, 120646, 139056,
@@ -165,8 +169,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of centered hypercube numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("centeredHyperCube");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("centeredHyperCube", {}),
+      seq.generate({}),
       [
         1, 17, 97, 337, 881, 1921, 3697, 6497, 10657, 16561, 24641, 35377, 49297, 66977, 89041,
         116161, 149057, 188497, 235297, 290321,
@@ -175,8 +180,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of centered hyperoctahedral numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("centeredHyperOctahedral");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("centeredHyperOctahedral", {}),
+      seq.generate({}),
       [
         1, 9, 41, 129, 321, 681, 1289, 2241, 3649, 5641, 8361, 11969, 16641, 22569, 29961, 39041,
         50049, 63241, 78889, 97281, 118721, 143529, 172041, 204609, 241601, 283401, 330409, 383041,
@@ -187,8 +193,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of k dimensional polygonal pyramidal numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("kDimensionalMgonalPyramidal");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalMgonalPyramidal", { k: 12n, m: 5n }),
+      seq.generate({ k: 12n, m: 5n }),
       [
         1, 15, 117, 637, 2730, 9828, 30940, 87516, 226746, 545870, 1234506, 2645370, 5408312,
         10608612, 20058300, 36699260, 65189475, 112739445, 190285095, 314106975, 508033890,
@@ -203,8 +210,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of four dimensional polygonal pyramidal numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("fourDimensionalMgonalPyramidal");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("fourDimensionalMgonalPyramidal", { m: 8n }),
+      seq.generate({ m: 8n }),
       [
         1, 10, 40, 110, 245, 476, 840, 1380, 2145, 3190, 4576, 6370, 8645, 11480, 14960, 19176,
         24225, 30210, 37240, 45430, 54901, 65780, 78200, 92300, 108225, 126126, 146160, 168490,
@@ -216,8 +224,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of five dimensional polygonal pyramidal numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("fiveDimensionalMgonalPyramidal");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("fiveDimensionalMgonalPyramidal", { m: 9n }),
+      seq.generate({ m: 9n }),
       [
         1, 12, 57, 182, 462, 1008, 1974, 3564, 6039, 9724, 15015, 22386, 32396, 45696, 63036, 85272,
         113373, 148428, 191653, 244398, 308154, 384560, 475410, 582660, 708435, 855036, 1024947,
@@ -227,8 +236,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of six dimensional polygonal pyramidal numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("sixDimensionalMgonalPyramidal");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("sixDimensionalMgonalPyramidal", { m: 16n }),
+      seq.generate({ m: 16n }),
       [
         1, 20, 119, 448, 1302, 3192, 6930, 13728, 25311, 44044, 73073, 116480, 179452, 268464,
         391476, 558144, 780045, 1070916, 1446907, 1926848, 2532530, 3289000, 4224870, 5372640,
@@ -240,8 +250,9 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of k dimensional centered hypertetrahedron numbers", () => {
+    const seq = new MultiDimensionalFigNumbers("kDimensionalCenteredHyperTetrahedron");
     compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalCenteredHyperTetrahedron", { k: 11n }),
+      seq.generate({ k: 11n }),
       [
         1, 13, 91, 455, 1820, 6188, 18564, 50388, 125970, 293930, 646646, 1352078, 2704155, 5200287,
         9657609, 17383405, 30419935, 51889747, 86474661, 141070137, 225666870, 354523390, 547707394,
@@ -260,93 +271,90 @@ describe("MultiDimensional Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of k dimensional centered hypercube numbers", () => {
-    compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalCenteredHyperCube", { k: 19n }),
-      [
-        1n,
-        524289n,
-        1162785755n,
-        276040168411n,
-        19348364235069n,
-        628433226338621n,
-        12008254925383639n,
-        155514083261229015n,
-        1494966905748847961n,
-        11350851717672992089n,
-        71159090448414546291n,
-        380639089819037473139n,
-        1781400289746069037525n,
-        7438224249324360507861n,
-        28144682159479920256559n,
-        97726241926445329278511n,
-        314630299411065648266289n,
-        947307781040489001204785n,
-        2686655001015651265481611n,
-        7221299655660313589123979n,
-        18491376640331026125580781n,
-        45313473853349391771396589n,
-        106680448140609076207724295n,
-        242115000837615863633192711n,
-        531297410619196448237299849n,
-        1130265145909533185640638601n,
-        2336510164282443502115157539n,
-        4703347349111490043111339555n,
-        9236565696619399921049654661n,
-        17725875916589991489578849669n,
-      ],
-    );
+    const seq = new MultiDimensionalFigNumbers("kDimensionalCenteredHyperCube");
+    compareExpectToEqual(seq.generate({ k: 19n }), [
+      1n,
+      524289n,
+      1162785755n,
+      276040168411n,
+      19348364235069n,
+      628433226338621n,
+      12008254925383639n,
+      155514083261229015n,
+      1494966905748847961n,
+      11350851717672992089n,
+      71159090448414546291n,
+      380639089819037473139n,
+      1781400289746069037525n,
+      7438224249324360507861n,
+      28144682159479920256559n,
+      97726241926445329278511n,
+      314630299411065648266289n,
+      947307781040489001204785n,
+      2686655001015651265481611n,
+      7221299655660313589123979n,
+      18491376640331026125580781n,
+      45313473853349391771396589n,
+      106680448140609076207724295n,
+      242115000837615863633192711n,
+      531297410619196448237299849n,
+      1130265145909533185640638601n,
+      2336510164282443502115157539n,
+      4703347349111490043111339555n,
+      9236565696619399921049654661n,
+      17725875916589991489578849669n,
+    ]);
   });
 
   it("should return the sequence of k dimensional centered hyperoctahedron numbers", () => {
-    compareExpectToEqual(
-      MultiDimensionalFigNumbers.generate("kDimensionalCenteredHyperOctahedron", { k: 32n }),
-      [
-        1n,
-        65n,
-        2113n,
-        45825n,
-        746241n,
-        9737793n,
-        106114625n,
-        993696769n,
-        8166636545n,
-        59864549953n,
-        396469547585n,
-        2397196917505n,
-        13348247055105n,
-        68954032430145n,
-        332538522833985n,
-        1505357362548737n,
-        6427269150511105n,
-        25991659563764801n,
-        99928969289077825n,
-        366485940838832897n,
-        1286011828550830849n,
-        4329547032027650625n,
-        14019400249152942657n,
-        43761350039110851585n,
-        131955581594696793089n,
-        385095408183758079553n,
-        1089618887377372884545n,
-        2993989196011368428289n,
-        8001035989283143418625n,
-        20824104716955953041473n,
-        52853228343044936894529n,
-        130973644638922564173825n,
-        317241780630136241094657n,
-        751874920284981143173185n,
-        1745319075862302066540609n,
-        3971699634878256948372225n,
-        8867962331174090943697665n,
-        19443209145457653013020225n,
-        41892715808110231862187585n,
-        88765858334732202193255425n,
-      ],
-    );
+    const seq = new MultiDimensionalFigNumbers("kDimensionalCenteredHyperOctahedron");
+    compareExpectToEqual(seq.generate({ k: 32n }), [
+      1n,
+      65n,
+      2113n,
+      45825n,
+      746241n,
+      9737793n,
+      106114625n,
+      993696769n,
+      8166636545n,
+      59864549953n,
+      396469547585n,
+      2397196917505n,
+      13348247055105n,
+      68954032430145n,
+      332538522833985n,
+      1505357362548737n,
+      6427269150511105n,
+      25991659563764801n,
+      99928969289077825n,
+      366485940838832897n,
+      1286011828550830849n,
+      4329547032027650625n,
+      14019400249152942657n,
+      43761350039110851585n,
+      131955581594696793089n,
+      385095408183758079553n,
+      1089618887377372884545n,
+      2993989196011368428289n,
+      8001035989283143418625n,
+      20824104716955953041473n,
+      52853228343044936894529n,
+      130973644638922564173825n,
+      317241780630136241094657n,
+      751874920284981143173185n,
+      1745319075862302066540609n,
+      3971699634878256948372225n,
+      8867962331174090943697665n,
+      19443209145457653013020225n,
+      41892715808110231862187585n,
+      88765858334732202193255425n,
+    ]);
   });
 
   it("should return the sequence of nexus numbers", () => {
-    compareExpectToEqual(MultiDimensionalFigNumbers.generate("nexus", { k: 24n }), [
+    const seq = new MultiDimensionalFigNumbers("nexus");
+    compareExpectToEqual(seq.generate({ k: 24n }), [
       1n,
       33554431n,
       847255055011n,

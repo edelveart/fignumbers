@@ -4,8 +4,9 @@ import { compareExpectToEqual } from "../../utils/helperGeneratorContext";
 
 describe("Plane Figurate Numbers Generation", () => {
   it("should return the sequence of octagonal numbers", () => {
+    const sequence = new PlaneFigNumbers("polygonal");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("polygonal", { m: 8n }),
+      sequence.generate({ m: 8n }),
       [
         1, 8, 21, 40, 65, 96, 133, 176, 225, 280, 341, 408, 481, 560, 645, 736, 833, 936, 1045,
         1160,
@@ -14,8 +15,9 @@ describe("Plane Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of centered polygonal numbers", () => {
+    const sequence = new PlaneFigNumbers("centeredPolygonal");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("centeredPolygonal", { m: 3n, start: 1n }),
+      sequence.generate({ m: 3n, start: 1n }),
       [
         1, 4, 10, 19, 31, 46, 64, 85, 109, 136, 166, 199, 235, 274, 316, 361, 409, 460, 514, 571,
         631, 694, 760, 829, 901, 976, 1054, 1135, 1219, 1306, 1396, 1489, 1585, 1684, 1786, 1891,
@@ -26,8 +28,9 @@ describe("Plane Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of truncated centered polygonal numbers", () => {
+    const sequence = new PlaneFigNumbers("truncatedCenteredPolygonal");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("truncatedCenteredPolygonal", { m: 7n }),
+      sequence.generate({ m: 7n }),
       [
         1, 36, 120, 253, 435, 666, 946, 1275, 1653, 2080, 2556, 3081, 3655, 4278, 4950, 5671, 6441,
         7260, 8128, 9045, 10011, 11026, 12090, 13203, 14365,
@@ -36,8 +39,9 @@ describe("Plane Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of pronic numbers", () => {
+    const sequence = new PlaneFigNumbers("pronic");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("pronic", {}),
+      sequence.generate({}),
       [
         2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380, 420,
         462, 506, 552, 600, 650, 702, 756, 812, 870, 930, 992, 1056, 1122, 1190, 1260, 1332, 1406,
@@ -49,43 +53,40 @@ describe("Plane Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of truncated pronic numbers", () => {
-    compareExpectToEqual(
-      PlaneFigNumbers.generate("truncatedPronic", {}),
-      [2, 16, 44, 86, 142, 212, 296, 394, 506, 632],
-    );
+    const sequence = new PlaneFigNumbers("truncatedPronic");
+    compareExpectToEqual(sequence.generate({}), [2, 16, 44, 86, 142, 212, 296, 394, 506, 632]);
   });
 
   it("should return the sequence of polite numbers", () => {
+    const sequence = new PlaneFigNumbers("polite");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("polite", {}),
+      sequence.generate({}),
       [1, 3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19],
     );
   });
 
   it("should return the sequence of impolite numbers", () => {
+    const sequence = new PlaneFigNumbers("impolite");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("impolite", {}),
+      sequence.generate({}),
       [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384],
     );
   });
 
   it("should return the sequence of aztec diamond numbers", () => {
-    compareExpectToEqual(
-      PlaneFigNumbers.generate("aztecDiamond", {}),
-      [4, 12, 24, 40, 60, 84, 112, 144, 180, 220],
-    );
+    const sequence = new PlaneFigNumbers("aztecDiamond");
+    compareExpectToEqual(sequence.generate({}), [4, 12, 24, 40, 60, 84, 112, 144, 180, 220]);
   });
 
   it("should return the sequence of gnomic numbers", () => {
-    compareExpectToEqual(
-      PlaneFigNumbers.generate("gnomic", {}),
-      [1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
-    );
+    const sequence = new PlaneFigNumbers("gnomic");
+    compareExpectToEqual(sequence.generate({}), [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]);
   });
 
   it("should return the sequence of cross numbers", () => {
+    const sequence = new PlaneFigNumbers("cross");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("cross", {}),
+      sequence.generate({}),
       [
         1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93,
         97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 137, 141, 145, 149, 153, 157, 161, 165,
@@ -95,8 +96,9 @@ describe("Plane Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of polygram numbers", () => {
+    const sequence = new PlaneFigNumbers("polygram");
     compareExpectToEqual(
-      PlaneFigNumbers.generate("polygram", { m: 3n }),
+      sequence.generate({ m: 3n }),
       [
         1, 7, 19, 37, 61, 91, 127, 169, 217, 271, 331, 397, 469, 547, 631, 721, 817, 919, 1027,
         1141, 1261, 1387, 1519, 1657, 1801, 1951, 2107, 2269, 2437, 2611, 2791, 2977, 3169, 3367,
