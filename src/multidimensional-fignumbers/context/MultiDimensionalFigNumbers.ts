@@ -5,11 +5,14 @@ import {
   type MultiDimensionalConfigMap,
 } from "../mapped-types/MultiDimensionalMappedTypes.js";
 
-export class MultiDimensionalFigNumbers {
-  static generate<KMap extends keyof MultiDimensionalConfigMap>(
-    strategyName: KMap,
-    config: MultiDimensionalConfigMap[KMap],
-  ): Generator<bigint> {
+export class MultiDimensionalFigNumbers<KMapStrategy extends keyof MultiDimensionalConfigMap> {
+  private strategy: KMapStrategy;
+
+  constructor(strategy: KMapStrategy) {
+    this.strategy = strategy;
+  }
+
+  generate(config: MultiDimensionalConfigMap[KMapStrategy]): Generator<bigint> {
     if (CONFIG_CONSTANTS.step in config) {
       Validator.validateStep(config.step);
     }
@@ -22,6 +25,6 @@ export class MultiDimensionalFigNumbers {
     if (CONFIG_CONSTANTS.k in config) {
       Validator.validateKDimension(config.k);
     }
-    return MULTIDIMENSIONAL_MAP_STRATEGY[strategyName].generate(config);
+    return MULTIDIMENSIONAL_MAP_STRATEGY[this.strategy].generate(config);
   }
 }
