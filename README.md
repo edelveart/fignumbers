@@ -56,7 +56,7 @@ const config = { start: 1n, m: 5n, step: 1n };
 
 // 3. Choose the type of space figurate number you want (pyramidal, cubic, etc.)
 const pyramidalSequence = new SpaceFigNumbers("pyramidal");
-const pyramidalNumbers= pyramidalSequence.generate(config);
+const pyramidalNumbers = pyramidalSequence.generate(config);
 
 // 4. Get ready to see the magic happen! First 7 pyramidal numbers with m = 5n:
 console.log("First 7 pyramidal numbers with m = 5n:");
