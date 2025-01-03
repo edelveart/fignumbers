@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/npm/l/fignumbers" alt="NPM License">
 </p>
 
-![fignumber-social-image](fignumber-banner.png)
+![Fignumbers Image](https://github.com/edelveart/fignumbers/blob/main/fignumber-banner.png)
 
 ## Rich variety with academic foundation 🚀
 
