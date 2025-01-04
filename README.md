@@ -19,7 +19,7 @@ Based on the book _Figurate Numbers_ (2012) by Elena Deza and Michel Deza, this 
 - **Algorithmic applications**
 - **Any work involving figurate number sequences**
 
-It is also efficient and precise, optimized for TypeScript to maximize performance and ensure type safety.
+It is precise and type-safe, but performance may not be as optimized as smaller number types, since bigint operations are typically slower than traditional number operations.
 
 ## Installation 🛠️
 
