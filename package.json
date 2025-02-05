@@ -35,9 +35,9 @@
   "license": "MIT",
   "devDependencies": {
     "@arethetypeswrong/cli": "0.17.0",
-    "prettier": "3.4.1",
+    "prettier": "3.4.2",
     "tsx": "4.19.2",
     "typescript": "5.7.2",
-    "vitest": "2.1.6"
+    "vitest": "3.0.5"
   }
 }
