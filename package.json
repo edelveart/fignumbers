@@ -1,6 +1,6 @@
 {
   "name": "fignumbers",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "A comprehensive TypeScript library for generating figurate numbers across multiple dimensions",
   "type": "module",
   "main": "dist/index.js",
