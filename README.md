@@ -4,9 +4,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/fignumbers" alt="NPM Version">
+  <img src="https://img.shields.io/npm/d18m/fignumbers" alt="NPM Downloads">
   <img src="https://img.shields.io/npm/types/fignumbers" alt="NPM Type Definitions">
   <img src="https://img.shields.io/npm/l/fignumbers" alt="NPM License">
-  <img src="https://img.shields.io/npm/d18m/fignumbers" alt="NPM Downloads">
 </p>
 
 [![Fignumbers Image](https://github.com/edelveart/fignumbers/blob/main/fignumber-banner.png)](https://www.npmjs.com/package/fignumbers)
