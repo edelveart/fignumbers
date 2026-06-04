@@ -79,7 +79,7 @@ describe("Plane Figurate Numbers Generation", () => {
   });
 
   it("should return the sequence of gnomic numbers", () => {
-    const sequence = new PlaneFigNumbers("gnomic");
+    const sequence = new PlaneFigNumbers("gnomonic");
     compareExpectToEqual(sequence.generate({}), [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]);
   });
 

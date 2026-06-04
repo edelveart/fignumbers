@@ -3,7 +3,7 @@ import {
   AztecDiamondGenerator,
   CenteredPolygonalGenerator,
   CrossGenerator,
-  GnomicGenerator,
+  GnomonicGenerator,
   ImpoliteGenerator,
   PoliteGenerator,
   PolygonalGenerator,
@@ -26,7 +26,7 @@ const baseStrategies = {
   polite: new PoliteGenerator(),
   impolite: new ImpoliteGenerator(),
   aztecDiamond: new AztecDiamondGenerator(),
-  gnomic: new GnomicGenerator(),
+  gnomonic: new GnomonicGenerator(),
   cross: new CrossGenerator(),
   polygram: new PolygramGenerator(),
 };

@@ -6,6 +6,6 @@ export * from "./CrossGenerator.js";
 export * from "./AztecDiamondGenerator.js";
 export * from "./PronicGenerator.js";
 export * from "./TruncatedPronicGenerator.js";
-export * from "./GnomicGenerator.js";
+export * from "./GnomonicGenerator.js";
 export * from "./PoliteGenerator.js";
 export * from "./ImpoliteGenerator.js";
