@@ -7,7 +7,7 @@ describe("Space Figurate Numbers Error Validation", () => {
     const seq = new SpaceFigNumbers("pyramidal");
     const invalidSteps = [0.5, -3, 7.43, 0n];
     invalidSteps.forEach((step: unknown | any) => {
-      expect(() => seq.generate({ step })).toThrowError(ERROR_MESSAGE.stepErrorMessage);
+      expect(() => seq.generate({ step })).toThrow(ERROR_MESSAGE.stepErrorMessage);
     });
   });
 
@@ -15,7 +15,7 @@ describe("Space Figurate Numbers Error Validation", () => {
     const seq = new SpaceFigNumbers("pyramidal");
     const invalidStart = [0.3, -3.4, 6.81, -13];
     invalidStart.forEach((start: unknown | any) => {
-      expect(() => seq.generate({ start })).toThrowError(ERROR_MESSAGE.startErrorMessage);
+      expect(() => seq.generate({ start })).toThrow(ERROR_MESSAGE.startErrorMessage);
     });
   });
 
@@ -23,7 +23,7 @@ describe("Space Figurate Numbers Error Validation", () => {
     const seq = new SpaceFigNumbers("pyramidal");
     const invalidMFacets = [0.5, 2, -1, 9.3, 2n];
     invalidMFacets.forEach((m: unknown | any) => {
-      expect(() => seq.generate({ m })).toThrowError(ERROR_MESSAGE.mFacetsErrorMessage);
+      expect(() => seq.generate({ m })).toThrow(ERROR_MESSAGE.mFacetsErrorMessage);
     });
   });
 });

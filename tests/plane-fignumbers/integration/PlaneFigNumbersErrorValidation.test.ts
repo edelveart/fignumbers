@@ -7,7 +7,7 @@ describe("Plane Figurate Numbers Error Validation", () => {
     const seq = new PlaneFigNumbers("polygonal");
     const invalidSteps = [-4n, -3n, 0.5];
     invalidSteps.forEach((step: unknown | any) => {
-      expect(() => seq.generate({ step })).toThrowError(ERROR_MESSAGE.stepErrorMessage);
+      expect(() => seq.generate({ step })).toThrow(ERROR_MESSAGE.stepErrorMessage);
     });
   });
 
@@ -15,7 +15,7 @@ describe("Plane Figurate Numbers Error Validation", () => {
     const invalidStart = [0.3, 0.12, 6.85, 0.5];
     const seq = new PlaneFigNumbers("polygonal");
     invalidStart.forEach((start: unknown | any) => {
-      expect(() => seq.generate({ start })).toThrowError(ERROR_MESSAGE.startErrorMessage);
+      expect(() => seq.generate({ start })).toThrow(ERROR_MESSAGE.startErrorMessage);
     });
   });
 
@@ -23,7 +23,7 @@ describe("Plane Figurate Numbers Error Validation", () => {
     const seq = new PlaneFigNumbers("polygonal");
     const invalidMFacets = [-5n, -48n, -0n, 4.35];
     invalidMFacets.forEach((m: unknown | any) => {
-      expect(() => seq.generate({ m })).toThrowError(ERROR_MESSAGE.mFacetsErrorMessage);
+      expect(() => seq.generate({ m })).toThrow(ERROR_MESSAGE.mFacetsErrorMessage);
     });
   });
 });
