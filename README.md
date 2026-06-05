@@ -11,7 +11,7 @@
 
 [![Fignumbers Image](https://github.com/edelveart/fignumbers/blob/main/fignumber-banner.png)](https://www.npmjs.com/package/fignumbers)
 
-## Rich variety with academic foundation 🚀
+## Rich variety with academic foundation
 
 Based on the book _Figurate Numbers_ (2012) by Elena Deza and Michel Deza, this library covers a broad range of figurate number sequences. This academic foundation ensures its reliability and precision for use in various fields:
 
@@ -22,7 +22,7 @@ Based on the book _Figurate Numbers_ (2012) by Elena Deza and Michel Deza, this 
 
 It is precise and type-safe, but `bigint` operations are generally slower than `number` operations.
 
-## Installation 🛠️
+## Installation
 
 First, make sure you have the library installed via npm:
 
@@ -30,13 +30,11 @@ First, make sure you have the library installed via npm:
 npm install fignumbers
 ```
 
-### BigInt Support Required ⚠️
+### BigInt Support Required
 
 - **Fignumbers** utilizes `BigInt` to manage large integers that exceed the `Number` type limit of `(2^53 - 1)`. Ensure that your environment supports **BigInt** before using this library.
 
-## Usage 🔥
-
-### Three main classes ⚙️
+### Three main classes
 
 **Fignumbers** is structured around three main classes, each corresponding to a different spatial dimension, as described in the book:
 
@@ -80,7 +78,7 @@ First 7 pyramidal numbers with m = 5n:
   Number 7: 196n
 ```
 
-## Overview of implemented sequences per class 🌟
+## Overview of implemented sequences per class
 
 ### 1. PlaneFigNumbers
 
@@ -92,7 +90,7 @@ First 7 pyramidal numbers with m = 5n:
 6. polite
 7. impolite
 8. aztecDiamond
-9. gnomic
+9. gnomonic
 10. cross
 11. polygram
 12. triangular
