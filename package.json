@@ -1,6 +1,6 @@
 {
   "name": "fignumbers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive TypeScript library for generating infinite figurate number sequences across multiple dimensions.",
   "type": "module",
   "main": "dist/index.js",
