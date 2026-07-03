@@ -22,8 +22,6 @@ Based on the book _Figurate Numbers_ (2012) by Elena Deza and Michel Deza, this 
 - **Algorithmic applications**
 - **Any work involving figurate number sequences**
 
-It is precise and type-safe, but `bigint` operations are generally slower than `number` operations.
-
 ## Installation
 
 First, make sure you have the library installed via npm:
@@ -34,7 +32,7 @@ npm install fignumbers
 
 ### BigInt Support Required
 
-- **Fignumbers** utilizes `BigInt` to manage large integers that exceed the `Number` type limit of `(2^53 - 1)`. Ensure that your environment supports **BigInt** before using this library.
+- **Fignumbers** utilizes `BigInt` to manage large integers that exceed the `Number` type limit of `(2^53 - 1)`.
 
 ### Three main classes
 
